@@ -20,6 +20,8 @@ excluded:
   - Pods
   - NeyvaTests
   # Добавить пути на другие сгенерированные классы – цвета/модели/шрифты
+  - e.bizhanovTests
+  - e.bizhanovUITests
 
 identifier_name:
   min_length: 2
