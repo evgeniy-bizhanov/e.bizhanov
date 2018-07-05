@@ -8,15 +8,18 @@
 
 import Alamofire
 
-protocol AuthRequestFactory {
+protocol AuthRequestFactory: BaseFactory {
     
     /**
      Выполняет авторизацию пользователя
      - Parameters:
-     - userName: Имя пользователя
-     - password: Пароль пользователя
+       - userName: Имя пользователя
+       - password: Пароль пользователя
      */
     func login(userName: String,
                password: String,
                completionHandler: @escaping (DataResponse<LoginResult>) -> Void)
+    
+    /// Выполняет выход из системы
+    func logout(completionHandler: @escaping (DataResponse<LogoutResult>) -> Void)
 }

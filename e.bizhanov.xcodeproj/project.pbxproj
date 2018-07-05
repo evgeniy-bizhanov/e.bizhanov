@@ -15,12 +15,15 @@
 		7A2584CA20E7E30B0030E644 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A2584C820E7E30B0030E644 /* LaunchScreen.storyboard */; };
 		7A2584D520E7E30B0030E644 /* e_bizhanovTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2584D420E7E30B0030E644 /* e_bizhanovTests.swift */; };
 		7A2584E020E7E30C0030E644 /* e_bizhanovUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2584DF20E7E30C0030E644 /* e_bizhanovUITests.swift */; };
+		7A3051FE20EEA3D900DDFD06 /* RegisterRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3051FD20EEA3D900DDFD06 /* RegisterRequestFactory.swift */; };
+		7A30520220EEA5F300DDFD06 /* BaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A30520120EEA5F300DDFD06 /* BaseFactory.swift */; };
 		7A3BC8FC20EE1ACE0050CEC8 /* AbstractErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3BC8FB20EE1ACE0050CEC8 /* AbstractErrorParser.swift */; };
 		7A3BC8FE20EE1AFE0050CEC8 /* ErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3BC8FD20EE1AFE0050CEC8 /* ErrorParser.swift */; };
 		7A3BC90020EE1B250050CEC8 /* AuthRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3BC8FF20EE1B250050CEC8 /* AuthRequestFactory.swift */; };
 		7A3BC90220EE1B430050CEC8 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3BC90120EE1B430050CEC8 /* Auth.swift */; };
 		7A3BC90420EE1B800050CEC8 /* AbstractRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3BC90320EE1B800050CEC8 /* AbstractRequestFactory.swift */; };
 		7A3BC90620EE1BAB0050CEC8 /* ResponseCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3BC90520EE1BAB0050CEC8 /* ResponseCodable.swift */; };
+		7A90159920EE89C900E63F9F /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A90159820EE89C900E63F9F /* Register.swift */; };
 		7AB75E5720EE309700DC4927 /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB75E5620EE309700DC4927 /* RequestFactory.swift */; };
 		7AE2CD6E20EE0924003792D6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE2CD6D20EE0924003792D6 /* User.swift */; };
 		AFCD319A7E7AA7D11E243995 /* Pods_e_bizhanov.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0275B7C3CD86EA722A4A944 /* Pods_e_bizhanov.framework */; };
@@ -61,12 +64,15 @@
 		7A2584DB20E7E30C0030E644 /* e.bizhanovUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = e.bizhanovUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A2584DF20E7E30C0030E644 /* e_bizhanovUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = e_bizhanovUITests.swift; sourceTree = "<group>"; };
 		7A2584E120E7E30C0030E644 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A3051FD20EEA3D900DDFD06 /* RegisterRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequestFactory.swift; sourceTree = "<group>"; };
+		7A30520120EEA5F300DDFD06 /* BaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseFactory.swift; sourceTree = "<group>"; };
 		7A3BC8FB20EE1ACE0050CEC8 /* AbstractErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractErrorParser.swift; sourceTree = "<group>"; };
 		7A3BC8FD20EE1AFE0050CEC8 /* ErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorParser.swift; sourceTree = "<group>"; };
 		7A3BC8FF20EE1B250050CEC8 /* AuthRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequestFactory.swift; sourceTree = "<group>"; };
 		7A3BC90120EE1B430050CEC8 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		7A3BC90320EE1B800050CEC8 /* AbstractRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractRequestFactory.swift; sourceTree = "<group>"; };
 		7A3BC90520EE1BAB0050CEC8 /* ResponseCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCodable.swift; sourceTree = "<group>"; };
+		7A90159820EE89C900E63F9F /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		7AB75E5620EE309700DC4927 /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
 		7AE2CD6D20EE0924003792D6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7FEC1D693AC07A71C9A63721 /* Pods-e.bizhanovUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e.bizhanovUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-e.bizhanovUITests/Pods-e.bizhanovUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -183,7 +189,9 @@
 		7A3BC8FA20EE1AA70050CEC8 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				7A30520120EEA5F300DDFD06 /* BaseFactory.swift */,
 				7A3BC8FF20EE1B250050CEC8 /* AuthRequestFactory.swift */,
+				7A3051FD20EEA3D900DDFD06 /* RegisterRequestFactory.swift */,
 				7A3BC90120EE1B430050CEC8 /* Auth.swift */,
 			);
 			path = Network;
@@ -243,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				7AE2CD6D20EE0924003792D6 /* User.swift */,
+				7A90159820EE89C900E63F9F /* Register.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -501,6 +510,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A3BC90420EE1B800050CEC8 /* AbstractRequestFactory.swift in Sources */,
+				7A90159920EE89C900E63F9F /* Register.swift in Sources */,
 				7A3BC90620EE1BAB0050CEC8 /* ResponseCodable.swift in Sources */,
 				7A3BC8FC20EE1ACE0050CEC8 /* AbstractErrorParser.swift in Sources */,
 				7AE2CD6E20EE0924003792D6 /* User.swift in Sources */,
@@ -508,6 +518,8 @@
 				7A2584C020E7E3080030E644 /* AppDelegate.swift in Sources */,
 				7AB75E5720EE309700DC4927 /* RequestFactory.swift in Sources */,
 				7A3BC8FE20EE1AFE0050CEC8 /* ErrorParser.swift in Sources */,
+				7A30520220EEA5F300DDFD06 /* BaseFactory.swift in Sources */,
+				7A3051FE20EEA3D900DDFD06 /* RegisterRequestFactory.swift in Sources */,
 				7A3BC90220EE1B430050CEC8 /* Auth.swift in Sources */,
 				7A19AD5F20EE2C820070EF3A /* RequestRouter.swift in Sources */,
 			);

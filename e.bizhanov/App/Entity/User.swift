@@ -11,6 +11,10 @@ struct LoginResult: Codable {
     let user: User
 }
 
+struct LogoutResult: Codable {
+    let result: Int
+}
+
 struct User: Codable {
     let id: Int
     let login: String
