@@ -16,6 +16,7 @@
 		7A2584E020E7E30C0030E644 /* e_bizhanovUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2584DF20E7E30C0030E644 /* e_bizhanovUITests.swift */; };
 		7A85D4DE20EDFA1F00FDDC4C /* AbstractErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A85D4D920EDFA1F00FDDC4C /* AbstractErrorParser.swift */; };
 		7A85D4DF20EDFA1F00FDDC4C /* ErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A85D4DA20EDFA1F00FDDC4C /* ErrorParser.swift */; };
+		7AF027EE20EDFD7B00BC3B27 /* ResponseCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF027ED20EDFD7B00BC3B27 /* ResponseCodable.swift */; };
 		AFCD319A7E7AA7D11E243995 /* Pods_e_bizhanov.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0275B7C3CD86EA722A4A944 /* Pods_e_bizhanov.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		7A2584E120E7E30C0030E644 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A85D4D920EDFA1F00FDDC4C /* AbstractErrorParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractErrorParser.swift; sourceTree = "<group>"; };
 		7A85D4DA20EDFA1F00FDDC4C /* ErrorParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorParser.swift; sourceTree = "<group>"; };
+		7AF027ED20EDFD7B00BC3B27 /* ResponseCodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseCodable.swift; sourceTree = "<group>"; };
 		7FEC1D693AC07A71C9A63721 /* Pods-e.bizhanovUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e.bizhanovUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-e.bizhanovUITests/Pods-e.bizhanovUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A7B2FC838CE82396D5363B46 /* Pods-e.bizhanovTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e.bizhanovTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-e.bizhanovTests/Pods-e.bizhanovTests.release.xcconfig"; sourceTree = "<group>"; };
 		C9D2158E3CCB0F3A25D7FFAB /* Pods-e.bizhanov.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e.bizhanov.release.xcconfig"; path = "Pods/Target Support Files/Pods-e.bizhanov/Pods-e.bizhanov.release.xcconfig"; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 		7A85D4D620EDFA1F00FDDC4C /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				7AF027ED20EDFD7B00BC3B27 /* ResponseCodable.swift */,
 				7A85D4D920EDFA1F00FDDC4C /* AbstractErrorParser.swift */,
 				7A85D4DA20EDFA1F00FDDC4C /* ErrorParser.swift */,
 			);
@@ -469,6 +472,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A85D4DF20EDFA1F00FDDC4C /* ErrorParser.swift in Sources */,
+				7AF027EE20EDFD7B00BC3B27 /* ResponseCodable.swift in Sources */,
 				7A2584C020E7E3080030E644 /* AppDelegate.swift in Sources */,
 				7A85D4DE20EDFA1F00FDDC4C /* AbstractErrorParser.swift in Sources */,
 			);
