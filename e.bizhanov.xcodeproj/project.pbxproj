@@ -14,6 +14,8 @@
 		7A2584CA20E7E30B0030E644 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A2584C820E7E30B0030E644 /* LaunchScreen.storyboard */; };
 		7A2584D520E7E30B0030E644 /* e_bizhanovTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2584D420E7E30B0030E644 /* e_bizhanovTests.swift */; };
 		7A2584E020E7E30C0030E644 /* e_bizhanovUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2584DF20E7E30C0030E644 /* e_bizhanovUITests.swift */; };
+		7A85D4DE20EDFA1F00FDDC4C /* AbstractErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A85D4D920EDFA1F00FDDC4C /* AbstractErrorParser.swift */; };
+		7A85D4DF20EDFA1F00FDDC4C /* ErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A85D4DA20EDFA1F00FDDC4C /* ErrorParser.swift */; };
 		AFCD319A7E7AA7D11E243995 /* Pods_e_bizhanov.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0275B7C3CD86EA722A4A944 /* Pods_e_bizhanov.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,8 @@
 		7A2584DB20E7E30C0030E644 /* e.bizhanovUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = e.bizhanovUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A2584DF20E7E30C0030E644 /* e_bizhanovUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = e_bizhanovUITests.swift; sourceTree = "<group>"; };
 		7A2584E120E7E30C0030E644 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A85D4D920EDFA1F00FDDC4C /* AbstractErrorParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractErrorParser.swift; sourceTree = "<group>"; };
+		7A85D4DA20EDFA1F00FDDC4C /* ErrorParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorParser.swift; sourceTree = "<group>"; };
 		7FEC1D693AC07A71C9A63721 /* Pods-e.bizhanovUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e.bizhanovUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-e.bizhanovUITests/Pods-e.bizhanovUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A7B2FC838CE82396D5363B46 /* Pods-e.bizhanovTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e.bizhanovTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-e.bizhanovTests/Pods-e.bizhanovTests.release.xcconfig"; sourceTree = "<group>"; };
 		C9D2158E3CCB0F3A25D7FFAB /* Pods-e.bizhanov.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e.bizhanov.release.xcconfig"; path = "Pods/Target Support Files/Pods-e.bizhanov/Pods-e.bizhanov.release.xcconfig"; sourceTree = "<group>"; };
@@ -170,6 +174,7 @@
 		7A4B294020E7FE270097B752 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				7A85D4D620EDFA1F00FDDC4C /* Network */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -219,6 +224,15 @@
 				7A2584BF20E7E3080030E644 /* AppDelegate.swift */,
 			);
 			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		7A85D4D620EDFA1F00FDDC4C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				7A85D4D920EDFA1F00FDDC4C /* AbstractErrorParser.swift */,
+				7A85D4DA20EDFA1F00FDDC4C /* ErrorParser.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		C694540D995F36C81EAB1078 /* Frameworks */ = {
@@ -454,7 +468,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A85D4DF20EDFA1F00FDDC4C /* ErrorParser.swift in Sources */,
 				7A2584C020E7E3080030E644 /* AppDelegate.swift in Sources */,
+				7A85D4DE20EDFA1F00FDDC4C /* AbstractErrorParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -623,7 +639,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6TZ3MZ977X;
 				INFOPLIST_FILE = e.bizhanov/Environments/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bizhanov.e-bizhanov";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -639,7 +658,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6TZ3MZ977X;
 				INFOPLIST_FILE = e.bizhanov/Environments/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bizhanov.e-bizhanov";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -656,7 +678,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6TZ3MZ977X;
 				INFOPLIST_FILE = e.bizhanovTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bizhanov.e-bizhanovTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -674,7 +700,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6TZ3MZ977X;
 				INFOPLIST_FILE = e.bizhanovTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bizhanov.e-bizhanovTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -691,7 +721,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6TZ3MZ977X;
 				INFOPLIST_FILE = e.bizhanovUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bizhanov.e-bizhanovUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -708,7 +742,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6TZ3MZ977X;
 				INFOPLIST_FILE = e.bizhanovUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bizhanov.e-bizhanovUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
