@@ -21,6 +21,7 @@
 		7A3BC90220EE1B430050CEC8 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3BC90120EE1B430050CEC8 /* Auth.swift */; };
 		7A3BC90420EE1B800050CEC8 /* AbstractRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3BC90320EE1B800050CEC8 /* AbstractRequestFactory.swift */; };
 		7A3BC90620EE1BAB0050CEC8 /* ResponseCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3BC90520EE1BAB0050CEC8 /* ResponseCodable.swift */; };
+		7AB75E5720EE309700DC4927 /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB75E5620EE309700DC4927 /* RequestFactory.swift */; };
 		7AE2CD6E20EE0924003792D6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE2CD6D20EE0924003792D6 /* User.swift */; };
 		AFCD319A7E7AA7D11E243995 /* Pods_e_bizhanov.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0275B7C3CD86EA722A4A944 /* Pods_e_bizhanov.framework */; };
 /* End PBXBuildFile section */
@@ -66,6 +67,7 @@
 		7A3BC90120EE1B430050CEC8 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		7A3BC90320EE1B800050CEC8 /* AbstractRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractRequestFactory.swift; sourceTree = "<group>"; };
 		7A3BC90520EE1BAB0050CEC8 /* ResponseCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCodable.swift; sourceTree = "<group>"; };
+		7AB75E5620EE309700DC4927 /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
 		7AE2CD6D20EE0924003792D6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7FEC1D693AC07A71C9A63721 /* Pods-e.bizhanovUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e.bizhanovUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-e.bizhanovUITests/Pods-e.bizhanovUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A7B2FC838CE82396D5363B46 /* Pods-e.bizhanovTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e.bizhanovTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-e.bizhanovTests/Pods-e.bizhanovTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 		7A4B294320E7FE8F0097B752 /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
+				7AB75E5620EE309700DC4927 /* RequestFactory.swift */,
 			);
 			path = Assembly;
 			sourceTree = "<group>";
@@ -503,6 +506,7 @@
 				7AE2CD6E20EE0924003792D6 /* User.swift in Sources */,
 				7A3BC90020EE1B250050CEC8 /* AuthRequestFactory.swift in Sources */,
 				7A2584C020E7E3080030E644 /* AppDelegate.swift in Sources */,
+				7AB75E5720EE309700DC4927 /* RequestFactory.swift in Sources */,
 				7A3BC8FE20EE1AFE0050CEC8 /* ErrorParser.swift in Sources */,
 				7A3BC90220EE1B430050CEC8 /* Auth.swift in Sources */,
 				7A19AD5F20EE2C820070EF3A /* RequestRouter.swift in Sources */,
