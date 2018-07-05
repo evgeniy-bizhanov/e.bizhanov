@@ -18,6 +18,7 @@
 		7A67785D20EDFDED000A2118 /* RequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A67785B20EDFDED000A2118 /* RequestRouter.swift */; };
 		7A85D4DE20EDFA1F00FDDC4C /* AbstractErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A85D4D920EDFA1F00FDDC4C /* AbstractErrorParser.swift */; };
 		7A85D4DF20EDFA1F00FDDC4C /* ErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A85D4DA20EDFA1F00FDDC4C /* ErrorParser.swift */; };
+		7AE2CD6E20EE0924003792D6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE2CD6D20EE0924003792D6 /* User.swift */; };
 		7AF027EE20EDFD7B00BC3B27 /* ResponseCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF027ED20EDFD7B00BC3B27 /* ResponseCodable.swift */; };
 		AFCD319A7E7AA7D11E243995 /* Pods_e_bizhanov.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0275B7C3CD86EA722A4A944 /* Pods_e_bizhanov.framework */; };
 /* End PBXBuildFile section */
@@ -60,6 +61,7 @@
 		7A67785B20EDFDED000A2118 /* RequestRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestRouter.swift; sourceTree = "<group>"; };
 		7A85D4D920EDFA1F00FDDC4C /* AbstractErrorParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractErrorParser.swift; sourceTree = "<group>"; };
 		7A85D4DA20EDFA1F00FDDC4C /* ErrorParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorParser.swift; sourceTree = "<group>"; };
+		7AE2CD6D20EE0924003792D6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7AF027ED20EDFD7B00BC3B27 /* ResponseCodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseCodable.swift; sourceTree = "<group>"; };
 		7FEC1D693AC07A71C9A63721 /* Pods-e.bizhanovUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e.bizhanovUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-e.bizhanovUITests/Pods-e.bizhanovUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A7B2FC838CE82396D5363B46 /* Pods-e.bizhanovTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e.bizhanovTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-e.bizhanovTests/Pods-e.bizhanovTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 		7A4B294420E7FEC80097B752 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				7AE2CD6D20EE0924003792D6 /* User.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -480,6 +483,7 @@
 				7A67785C20EDFDED000A2118 /* AbstractRequestFactory.swift in Sources */,
 				7A85D4DF20EDFA1F00FDDC4C /* ErrorParser.swift in Sources */,
 				7A67785D20EDFDED000A2118 /* RequestRouter.swift in Sources */,
+				7AE2CD6E20EE0924003792D6 /* User.swift in Sources */,
 				7AF027EE20EDFD7B00BC3B27 /* ResponseCodable.swift in Sources */,
 				7A2584C020E7E3080030E644 /* AppDelegate.swift in Sources */,
 				7A85D4DE20EDFA1F00FDDC4C /* AbstractErrorParser.swift in Sources */,
