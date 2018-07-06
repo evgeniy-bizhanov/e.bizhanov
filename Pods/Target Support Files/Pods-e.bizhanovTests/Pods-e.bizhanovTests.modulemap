@@ -1,0 +1,6 @@
+framework module Pods_e_bizhanovTests {
+  umbrella header "Pods-e.bizhanovTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
