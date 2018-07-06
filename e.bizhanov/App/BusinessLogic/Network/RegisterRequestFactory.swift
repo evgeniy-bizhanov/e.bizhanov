@@ -13,9 +13,9 @@ protocol RegisterRequestFactory: BaseFactory {
     /**
      Выполняет регистрацию пользователя
      - Parameters:
-     - userInfo: Информация о пользователе `RegisterUser`
+       - userData: Данные пользователя `UserData`
      */
-    func register(userInfo: RegisterUser,
+    func register(userData: UserData,
                   completionHandler: @escaping (DataResponse<RegisterResult>) -> Void)
     
 }

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0549F0064EBFF0A3ED6285F2 /* Pods_e_bizhanovUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1F2211489BE4D167E9DF77 /* Pods_e_bizhanovUITests.framework */; };
 		2FB8365D98DDE9919CA022F1 /* Pods_e_bizhanovTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 138B76B95677F588AC000202 /* Pods_e_bizhanovTests.framework */; };
+		7A17676F20EF305D00D38134 /* ProfileRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A17676E20EF305D00D38134 /* ProfileRequestFactory.swift */; };
+		7A17677120EF34AC00D38134 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A17677020EF34AC00D38134 /* Profile.swift */; };
+		7A17677320EF353A00D38134 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A17677220EF353A00D38134 /* UserData.swift */; };
 		7A19AD5F20EE2C820070EF3A /* RequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A19AD5E20EE2C820070EF3A /* RequestRouter.swift */; };
 		7A2584C020E7E3080030E644 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2584BF20E7E3080030E644 /* AppDelegate.swift */; };
 		7A2584C720E7E30B0030E644 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A2584C620E7E30B0030E644 /* Assets.xcassets */; };
@@ -52,6 +55,9 @@
 		2DAE617F9F555E60B91BF5BC /* Pods-e.bizhanovUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e.bizhanovUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-e.bizhanovUITests/Pods-e.bizhanovUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		329D2EC673C1229210F4DBD6 /* Pods-e.bizhanovTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e.bizhanovTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-e.bizhanovTests/Pods-e.bizhanovTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5F1F2211489BE4D167E9DF77 /* Pods_e_bizhanovUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_e_bizhanovUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A17676E20EF305D00D38134 /* ProfileRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRequestFactory.swift; sourceTree = "<group>"; };
+		7A17677020EF34AC00D38134 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		7A17677220EF353A00D38134 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		7A19AD5E20EE2C820070EF3A /* RequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRouter.swift; sourceTree = "<group>"; };
 		7A2584BC20E7E3080030E644 /* e.bizhanov.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = e.bizhanov.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A2584BF20E7E3080030E644 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -192,7 +198,9 @@
 				7A30520120EEA5F300DDFD06 /* BaseFactory.swift */,
 				7A3BC8FF20EE1B250050CEC8 /* AuthRequestFactory.swift */,
 				7A3051FD20EEA3D900DDFD06 /* RegisterRequestFactory.swift */,
+				7A17676E20EF305D00D38134 /* ProfileRequestFactory.swift */,
 				7A3BC90120EE1B430050CEC8 /* Auth.swift */,
+				7A17677020EF34AC00D38134 /* Profile.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -252,6 +260,7 @@
 			children = (
 				7AE2CD6D20EE0924003792D6 /* User.swift */,
 				7A90159820EE89C900E63F9F /* Register.swift */,
+				7A17677220EF353A00D38134 /* UserData.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -510,12 +519,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A3BC90420EE1B800050CEC8 /* AbstractRequestFactory.swift in Sources */,
+				7A17677120EF34AC00D38134 /* Profile.swift in Sources */,
 				7A90159920EE89C900E63F9F /* Register.swift in Sources */,
+				7A17676F20EF305D00D38134 /* ProfileRequestFactory.swift in Sources */,
 				7A3BC90620EE1BAB0050CEC8 /* ResponseCodable.swift in Sources */,
 				7A3BC8FC20EE1ACE0050CEC8 /* AbstractErrorParser.swift in Sources */,
 				7AE2CD6E20EE0924003792D6 /* User.swift in Sources */,
 				7A3BC90020EE1B250050CEC8 /* AuthRequestFactory.swift in Sources */,
 				7A2584C020E7E3080030E644 /* AppDelegate.swift in Sources */,
+				7A17677320EF353A00D38134 /* UserData.swift in Sources */,
 				7AB75E5720EE309700DC4927 /* RequestFactory.swift in Sources */,
 				7A3BC8FE20EE1AFE0050CEC8 /* ErrorParser.swift in Sources */,
 				7A30520220EEA5F300DDFD06 /* BaseFactory.swift in Sources */,

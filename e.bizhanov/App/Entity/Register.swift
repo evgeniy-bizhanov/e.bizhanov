@@ -10,13 +10,3 @@ struct RegisterResult: Codable {
     let result: Int
     let userMessage: String
 }
-
-struct RegisterUser {
-    let id: Int
-    let username: String
-    let password: String
-    let email: String
-    let gender: String
-    let creditCard: String
-    let bio: String
-}

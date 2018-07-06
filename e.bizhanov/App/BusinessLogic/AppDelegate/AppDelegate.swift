@@ -17,8 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Login
-        let auth: AuthRequestFactory? = requestFactory.makeRequestFactory()
-        auth?.login(userName: "some-username", password: "some-password") { response in
+        let auth: AuthRequestFactory = requestFactory.makeAuthRequestFactory()
+        auth.login(userName: "some-username", password: "some-password") { response in
             switch response.result {
             case .success(let login):
                 print("---\nlogin: \(login)")
@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         // Logout
-        auth?.logout { response in
+        auth.logout { response in
             switch response.result {
             case .success(let logout):
                 print("---\nlogout: \(logout)")
@@ -38,8 +38,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         // Register
-        let register: RegisterRequestFactory? = requestFactory.makeRequestFactory()
-        let userInfo = RegisterUser(id: -1,
+        let register: RegisterRequestFactory = requestFactory.makeAuthRequestFactory()
+        let userData = UserData(id: 123,
                                     username: "username",
                                     password: "password",
                                     email: "email",
@@ -47,10 +47,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                     creditCard: "credit",
                                     bio: "bio")
         
-        register?.register(userInfo: userInfo) { response in
+        register.register(userData: userData) { response in
             switch response.result {
             case .success(let result):
                 print("---\nregister: \(result)")
+            case .failure(let error):
+                print(error)
+            }
+        }
+        
+        // Change user data
+        let profile: ProfileRequestFactory = requestFactory.makeProfileRequestFactory()
+        
+        profile.changeProfile (userData: userData) { response in
+            switch response.result {
+            case .success(let result):
+                print("---\nchange-profile: \(result)")
             case .failure(let error):
                 print(error)
             }

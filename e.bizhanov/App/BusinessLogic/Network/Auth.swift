@@ -37,13 +37,13 @@ extension Auth: AuthRequestFactory {
 }
 
 extension Auth: RegisterRequestFactory {
-    func register(userInfo: RegisterUser, completionHandler: @escaping (DataResponse<RegisterResult>) -> Void) {
-        let requestModel = Register(baseUrl: baseUrl, registerInfo: userInfo)
+    func register(userData: UserData, completionHandler: @escaping (DataResponse<RegisterResult>) -> Void) {
+        let requestModel = Register(baseUrl: baseUrl, userData: userData)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
 }
 
-//- MARK: Login request router
+// MARK: - Login request router
 extension Auth {
     struct Login: RequestRouter {
         let baseUrl: URL
@@ -62,29 +62,29 @@ extension Auth {
     }
 }
 
-//- MARK: Register request router
+// MARK: - Register request router
 extension Auth {
     struct Register: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .get
         let path: String = "registerUser.json"
         
-        let registerInfo: RegisterUser
+        let userData: UserData
         
         var parameters: Parameters? {
             return [
-                "username": registerInfo.username,
-                "password": registerInfo.password,
-                "email": registerInfo.email,
-                "gender": registerInfo.gender,
-                "credit_card": registerInfo.creditCard,
-                "bio": registerInfo.bio
+                "username": userData.username,
+                "password": userData.password,
+                "email": userData.email,
+                "gender": userData.gender,
+                "credit_card": userData.creditCard,
+                "bio": userData.bio
             ]
         }
     }
 }
 
-//- MARK: Logout request router
+// MARK: - Logout request router
 extension Auth {
     struct Logout: RequestRouter {
         let baseUrl: URL
