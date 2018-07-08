@@ -8,7 +8,7 @@
 
 import Alamofire
 
-protocol ProfileRequestFactory: BaseFactory {
+protocol ProfileRequestFactory {
     
     /**
      Изменяет данные в профиле пользователя пользователя

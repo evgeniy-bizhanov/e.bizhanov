@@ -9,11 +9,13 @@
 import Alamofire
 
 extension DataRequest {
+    typealias Completion<T> = (DataResponse<T>) -> Void
+    
     @discardableResult
     func responseCodable<T: Decodable>(
         errorParser: ​AbstractErrorParser​,
         queue: DispatchQueue?,
-        completionHandler: @escaping (DataResponse<T>) -> Void) -> Self {
+        completionHandler: @escaping Completion<T>) -> Self {
         let responseSerializer = DataResponseSerializer<T> { _, response, data, error in
             if let error = errorParser.parse(response: response, data: data, error: error) {
                 return .failure(error)

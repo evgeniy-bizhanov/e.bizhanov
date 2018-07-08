@@ -28,26 +28,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         // Logout
-        auth.logout { response in
-            switch response.result {
-            case .success(let logout):
-                print("---\nlogout: \(logout)")
-            case .failure(let error):
-                print(error)
-            }
-        }
+        auth.logout()
         
         // Register
-        let register: RegisterRequestFactory = requestFactory.makeAuthRequestFactory()
-        let userData = UserData(id: 123,
-                                    username: "username",
-                                    password: "password",
-                                    email: "email",
-                                    gender: "m",
-                                    creditCard: "credit",
-                                    bio: "bio")
+        let userData = UserData(
+            id: 123,
+            username: "username",
+            password: "password",
+            email: "email",
+            gender: "m",
+            creditCard: "credit",
+            bio: "bio"
+        )
         
-        register.register(userData: userData) { response in
+        auth.register(userData: userData) { response in
             switch response.result {
             case .success(let result):
                 print("---\nregister: \(result)")
