@@ -8,6 +8,7 @@ target 'e.bizhanov' do
   # Pods for e.bizhanov
   pod 'SwiftLint', '~> 0.25'
   pod 'Alamofire', '~> 4.7'
+  pod 'OHHTTPStubs/Swift', '~> 6.1.0'
 
   target 'e.bizhanovTests' do
     inherit! :search_paths

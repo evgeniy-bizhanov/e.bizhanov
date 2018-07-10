@@ -16,6 +16,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        let catalog: CatalogRequestFactory = requestFactory.makeCatalogRequestFactory()
+        
+        let filter = FilterData(categoryId: 1)
+        catalog.getProducts(pageNumber: 1, filterData: filter) { response in
+            switch response.result {
+            case .success(let login):
+                print("---\nproducts: \(login)")
+            case .failure(let error):
+                print(error)
+            }
+        }
+        
         // Login
         let auth: AuthRequestFactory = requestFactory.makeAuthRequestFactory()
         auth.login(userName: "some-username", password: "some-password") { response in
@@ -28,26 +41,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         // Logout
-        auth.logout { response in
-            switch response.result {
-            case .success(let logout):
-                print("---\nlogout: \(logout)")
-            case .failure(let error):
-                print(error)
-            }
-        }
+        auth.logout()
         
         // Register
-        let register: RegisterRequestFactory = requestFactory.makeAuthRequestFactory()
-        let userData = UserData(id: 123,
-                                    username: "username",
-                                    password: "password",
-                                    email: "email",
-                                    gender: "m",
-                                    creditCard: "credit",
-                                    bio: "bio")
+        let userData = UserData(
+            id: 123,
+            username: "username",
+            password: "password",
+            email: "email",
+            gender: "m",
+            creditCard: "credit",
+            bio: "bio"
+        )
         
-        register.register(userData: userData) { response in
+        auth.register(userData: userData) { response in
             switch response.result {
             case .success(let result):
                 print("---\nregister: \(result)")

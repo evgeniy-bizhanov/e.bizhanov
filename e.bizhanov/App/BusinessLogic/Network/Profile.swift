@@ -8,23 +8,7 @@
 
 import Alamofire
 
-class Profile: AbstractRequestFactory {
-    let errorParser: ​AbstractErrorParser​
-    let sessionManager: SessionManager
-    let queue: DispatchQueue?
-    let baseUrl: URL! = URL(string: "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/")
-    
-    init (
-        errorParser: ​AbstractErrorParser​,
-        sessionManager: SessionManager,
-        queue: DispatchQueue? = DispatchQueue.global(qos: .utility)) {
-        self.errorParser = errorParser
-        self.sessionManager = sessionManager
-        self.queue = queue
-    }
-}
-
-extension Profile: ProfileRequestFactory {
+class Profile: BaseRequestFactory, ProfileRequestFactory {
     func changeProfile(userData: UserData, completionHandler: @escaping (DataResponse<ChangeUserDataResult>) -> Void) {
         let requestModel = Profile(baseUrl: baseUrl, userData: userData)
         self.request(request: requestModel, completionHandler: completionHandler)

@@ -7,16 +7,18 @@
 //
 
 import Alamofire
+import OHHTTPStubs
+@testable import e_bizhanov
 
-class RequestFactory {
+class RequestFactoryMock {
     func makeErrorParser() -> ​AbstractErrorParser​ {
         return ErrorParser()
     }
     
     lazy var commonSessionManager: SessionManager = {
         let configuration = URLSessionConfiguration.default
-        configuration.httpShouldSetCookies = false
-        configuration.httpAdditionalHeaders = SessionManager.defaultHTTPHeaders
+        
+        OHHTTPStubs.isEnabled(for: configuration)
         
         let manager = SessionManager(configuration: configuration)
         return manager
@@ -36,7 +38,7 @@ class RequestFactory {
 }
 
 // Делаем через extension, что бы можно было перетаскивать код в проект, не занимаясь постоянным переименовыванием классов
-extension RequestFactory {
+extension RequestFactoryMock {
     func makeCatalogRequestFactory<T>() -> T! {
         let errorParser = makeErrorParser()
         return Catalog(errorParser: errorParser, sessionManager: commonSessionManager, queue: sessionQueue) as? T

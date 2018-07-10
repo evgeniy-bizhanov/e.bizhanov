@@ -8,7 +8,7 @@
 
 import Alamofire
 
-protocol AuthRequestFactory: BaseFactory {
+protocol AuthRequestFactory {
     
     /**
      Выполняет авторизацию пользователя
@@ -21,5 +21,14 @@ protocol AuthRequestFactory: BaseFactory {
                completionHandler: @escaping (DataResponse<LoginResult>) -> Void)
     
     /// Выполняет выход из системы
-    func logout(completionHandler: @escaping (DataResponse<LogoutResult>) -> Void)
+    func logout()
+    
+    /**
+     Выполняет регистрацию пользователя
+     - Parameters:
+       - userData: Данные пользователя `UserData`
+     */
+    func register(userData: UserData,
+                  completionHandler: @escaping (DataResponse<RegisterResult>) -> Void)
+    
 }
