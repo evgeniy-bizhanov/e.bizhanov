@@ -16,6 +16,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        let catalog: CatalogRequestFactory = requestFactory.makeCatalogRequestFactory()
+        
+        let filter = FilterData(categoryId: 1)
+        catalog.getProducts(pageNumber: 1, filterData: filter) { response in
+            switch response.result {
+            case .success(let login):
+                print("---\nproducts: \(login)")
+            case .failure(let error):
+                print(error)
+            }
+        }
+        
         // Login
         let auth: AuthRequestFactory = requestFactory.makeAuthRequestFactory()
         auth.login(userName: "some-username", password: "some-password") { response in
