@@ -1,17 +1,12 @@
-//
-//  RequestFactory.swift
-//  e.bizhanov
-//
-//  Created by Евгений Бижанов on 05.07.2018.
-//  Copyright © 2018 Евгений Бижанов. All rights reserved.
-//
-
 import Alamofire
 
+/**
+ Подготавливает и предоставляет реализации конкретных `request` менеджеров
+ */
 class RequestFactory {
-    func makeErrorParser() -> ​AbstractErrorParser​ {
-        return ErrorParser()
-    }
+    
+    // MARK: - Fields
+    let sessionQueue = DispatchQueue.global(qos: .utility)
     
     lazy var commonSessionManager: SessionManager = {
         let configuration = URLSessionConfiguration.default
@@ -22,23 +17,41 @@ class RequestFactory {
         return manager
     }()
     
-    let sessionQueue = DispatchQueue.global(qos: .utility)
-    
-    func makeAuthRequestFactory<T>() -> T! {
-        let errorParser = makeErrorParser()
-        return Auth(errorParser: errorParser, sessionManager: commonSessionManager, queue: sessionQueue) as? T
-    }
-    
-    func makeProfileRequestFactory<T>() -> T! {
-        let errorParser = makeErrorParser()
-        return Profile(errorParser: errorParser, sessionManager: commonSessionManager, queue: sessionQueue) as? T
+    // MARK: - Functions
+    func makeErrorParser() -> ​AbstractErrorParser​ {
+        return ErrorParser()
     }
 }
 
-// Делаем через extension, что бы можно было перетаскивать код в проект, не занимаясь постоянным переименовыванием классов
+// MARK: - Auth manager
+extension RequestFactory {
+    func makeAuthRequestFactory<T>() -> T! {
+        let errorParser = makeErrorParser()
+        return AuthRequestManager(
+            errorParser: errorParser,
+            sessionManager: commonSessionManager,
+            queue: sessionQueue) as? T
+    }
+}
+
+// MARK: - Profile manager
+extension RequestFactory {
+    func makeProfileRequestFactory<T>() -> T! {
+        let errorParser = makeErrorParser()
+        return ProfileRequestManager(
+            errorParser: errorParser,
+            sessionManager: commonSessionManager,
+            queue: sessionQueue) as? T
+    }
+}
+
+// MARK: - Catalog manager
 extension RequestFactory {
     func makeCatalogRequestFactory<T>() -> T! {
         let errorParser = makeErrorParser()
-        return Catalog(errorParser: errorParser, sessionManager: commonSessionManager, queue: sessionQueue) as? T
+        return CatalogRequestManager(
+            errorParser: errorParser,
+            sessionManager: commonSessionManager,
+            queue: sessionQueue) as? T
     }
 }

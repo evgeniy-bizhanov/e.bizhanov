@@ -1,14 +1,9 @@
-//
-//  AbstractRequestFactory.swift
-//  e.bizhanov
-//
-//  Created by Евгений Бижанов on 05.07.2018.
-//  Copyright © 2018 Евгений Бижанов. All rights reserved.
-//
-
 import Alamofire
 
-protocol AbstractRequestFactory {
+/**
+ Предоставляет реализацию сетевого запроса по умолчанию
+ */
+protocol AbstractRequestManager {
     typealias Completion<T> = (DataResponse<T>) -> Void
     
     var errorParser: ​AbstractErrorParser​ { get }
@@ -16,11 +11,12 @@ protocol AbstractRequestFactory {
     var queue: DispatchQueue? { get }
     
     @discardableResult
-    func request<T: Decodable>(request: URLRequestConvertible,
-                               completionHandler: @escaping Completion<T>) -> DataRequest
+    func request<T: Decodable>(
+        request: URLRequestConvertible,
+        completionHandler: @escaping Completion<T>) -> DataRequest
 }
 
-extension AbstractRequestFactory {
+extension AbstractRequestManager {
     @discardableResult
     public func request<T: Decodable>(request: URLRequestConvertible,
                                       completionHandler: @escaping Completion<T>) -> DataRequest {

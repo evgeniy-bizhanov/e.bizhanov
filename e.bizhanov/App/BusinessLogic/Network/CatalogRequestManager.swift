@@ -1,34 +1,27 @@
-//
-//  Catalog.swift
-//  e.bizhanov
-//
-//  Created by Евгений Бижанов on 10.07.2018.
-//  Copyright © 2018 Евгений Бижанов. All rights reserved.
-//
-
 import Alamofire
 
-class Catalog: BaseRequestFactory, CatalogRequestFactory {
+class CatalogRequestManager: RequestManager, CatalogRequestFactory {
 
-    func getProducts(
-        pageNumber: Int,
-        filterData: FilterData,
+    // MARK: - Functions
+    func products(
+        fromPage page: Int,
+        withFilter filter: FilterData,
         completionHandler: @escaping (DataResponse<[Product]>) -> Void) {
-        let requestModel = ProductsRequest(baseUrl: baseUrl, pageNumber: pageNumber, filterData: filterData)
+        let requestModel = ProductsRequest(baseUrl: baseUrl, pageNumber: page, filterData: filter)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
     
     // FIXME: API не реализовано на сервере
-    func getAnotherProduct(
-        productId: Int,
+    func product(
+        withId id: Int,
         completionHandler: @escaping (DataResponse<Product>) -> Void) {
-        let requestModel = ProductRequest(baseUrl: baseUrl, productId: productId)
+        let requestModel = ProductRequest(baseUrl: baseUrl, productId: id)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
 }
 
 // MARK: - Products request router
-extension Catalog {
+extension CatalogRequestManager {
     struct ProductsRequest: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .get
@@ -47,7 +40,7 @@ extension Catalog {
 }
 
 // MARK: - Another product request router
-extension Catalog {
+extension CatalogRequestManager {
     struct ProductRequest: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .get

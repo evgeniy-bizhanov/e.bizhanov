@@ -1,16 +1,12 @@
-//
-//  ResponseCodable.swift
-//  e.bizhanov
-//
-//  Created by Евгений Бижанов on 05.07.2018.
-//  Copyright © 2018 Евгений Бижанов. All rights reserved.
-//
-
 import Alamofire
 
 extension DataRequest {
     typealias Completion<T> = (DataResponse<T>) -> Void
     
+    /**
+     Создает пользовательский `JSON` сериализатор и передает его в `Alamofire`
+     для распаковки ответа сервера
+     */
     @discardableResult
     func responseCodable<T: Decodable>(
         errorParser: ​AbstractErrorParser​,
@@ -38,6 +34,10 @@ extension DataRequest {
             }
         }
         
-        return response(queue: queue, responseSerializer: responseSerializer, completionHandler: completionHandler)
+        return response(
+            queue: queue,
+            responseSerializer: responseSerializer,
+            completionHandler: completionHandler
+        )
     }
 }

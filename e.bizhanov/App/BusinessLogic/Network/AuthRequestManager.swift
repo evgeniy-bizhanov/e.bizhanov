@@ -1,32 +1,34 @@
-//
-//  Auth.swift
-//  e.bizhanov
-//
-//  Created by Евгений Бижанов on 05.07.2018.
-//  Copyright © 2018 Евгений Бижанов. All rights reserved.
-//
-
 import Alamofire
 
-class Auth: BaseRequestFactory, AuthRequestFactory {
-    func login(userName: String, password: String, completionHandler: @escaping (DataResponse<LoginResult>) -> Void) {
+/**
+ Выполняет авторизацию пользователя на сервере
+ */
+class AuthRequestManager: RequestManager, AuthRequestFactory {
+    
+    // MARK: - Functions
+    func login(
+        userName: String,
+        password: String,
+        completionHandler: @escaping (DataResponse<LoginResult>) -> Void) {
         let requestModel = Login(baseUrl: baseUrl, login: userName, password: password)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
     
     func logout() {
         let requestModel = Logout(baseUrl: baseUrl)
-        self.request(request: requestModel) { (_: DataResponse<LogoutResult>) in }
+        self.request(request: requestModel) { (_: DataResponse<Bool>) in }
     }
     
-    func register(userData: UserData, completionHandler: @escaping (DataResponse<RegisterResult>) -> Void) {
+    func register(
+        userData: UserData,
+        completionHandler: @escaping (DataResponse<RegisterResult>) -> Void) {
         let requestModel = Register(baseUrl: baseUrl, userData: userData)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
 }
 
 // MARK: - Login request router
-extension Auth {
+extension AuthRequestManager {
     struct Login: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .get
@@ -45,7 +47,7 @@ extension Auth {
 }
 
 // MARK: - Register request router
-extension Auth {
+extension AuthRequestManager {
     struct Register: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .get
@@ -67,7 +69,7 @@ extension Auth {
 }
 
 // MARK: - Logout request router
-extension Auth {
+extension AuthRequestManager {
     struct Logout: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .get
