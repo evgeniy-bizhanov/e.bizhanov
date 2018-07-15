@@ -26,7 +26,7 @@ class RequestFactoryMock {
 }
 
 // MARK: - Auth manager
-extension RequestFactory {
+extension RequestFactoryMock {
     func makeAuthRequestFactory<T>() -> T! {
         let errorParser = makeErrorParser()
         return AuthRequestManager(
@@ -37,7 +37,7 @@ extension RequestFactory {
 }
 
 // MARK: - Profile manager
-extension RequestFactory {
+extension RequestFactoryMock {
     func makeProfileRequestFactory<T>() -> T! {
         let errorParser = makeErrorParser()
         return ProfileRequestManager(
@@ -48,7 +48,7 @@ extension RequestFactory {
 }
 
 // MARK: - Catalog manager
-extension RequestFactory {
+extension RequestFactoryMock {
     func makeCatalogRequestFactory<T>() -> T! {
         let errorParser = makeErrorParser()
         return CatalogRequestManager(
