@@ -37,6 +37,13 @@
 		7A463B4C20F4A8F3003332FC /* anotherProduct.json.stub in Resources */ = {isa = PBXBuildFile; fileRef = 7A463B4B20F4A8F3003332FC /* anotherProduct.json.stub */; };
 		7A90159920EE89C900E63F9F /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A90159820EE89C900E63F9F /* Register.swift */; };
 		7AB75E5720EE309700DC4927 /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB75E5620EE309700DC4927 /* RequestFactory.swift */; };
+		7ACE699020FBF88F00290A25 /* ReviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACE698F20FBF88F00290A25 /* ReviewTests.swift */; };
+		7ACE699220FBFD8400290A25 /* reviews.json.stub in Resources */ = {isa = PBXBuildFile; fileRef = 7ACE699120FBFD8400290A25 /* reviews.json.stub */; };
+		7ACE699420FC002700290A25 /* addReview.json.stub in Resources */ = {isa = PBXBuildFile; fileRef = 7ACE699320FC002700290A25 /* addReview.json.stub */; };
+		7ACE699620FC00DC00290A25 /* removeReview.json.stub in Resources */ = {isa = PBXBuildFile; fileRef = 7ACE699520FC00DC00290A25 /* removeReview.json.stub */; };
+		7ACE699820FC02C900290A25 /* ReviewsRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACE699720FC02C900290A25 /* ReviewsRequestFactory.swift */; };
+		7ACE699A20FC05E100290A25 /* ReviewsRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACE699920FC05E000290A25 /* ReviewsRequestManager.swift */; };
+		7ACE699C20FC06A900290A25 /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACE699B20FC06A900290A25 /* Reviews.swift */; };
 		7AE2CD6E20EE0924003792D6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE2CD6D20EE0924003792D6 /* User.swift */; };
 		AFCD319A7E7AA7D11E243995 /* Pods_e_bizhanov.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0275B7C3CD86EA722A4A944 /* Pods_e_bizhanov.framework */; };
 /* End PBXBuildFile section */
@@ -98,6 +105,13 @@
 		7A463B4B20F4A8F3003332FC /* anotherProduct.json.stub */ = {isa = PBXFileReference; lastKnownFileType = text; path = anotherProduct.json.stub; sourceTree = "<group>"; };
 		7A90159820EE89C900E63F9F /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		7AB75E5620EE309700DC4927 /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
+		7ACE698F20FBF88F00290A25 /* ReviewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTests.swift; sourceTree = "<group>"; };
+		7ACE699120FBFD8400290A25 /* reviews.json.stub */ = {isa = PBXFileReference; lastKnownFileType = text; path = reviews.json.stub; sourceTree = "<group>"; };
+		7ACE699320FC002700290A25 /* addReview.json.stub */ = {isa = PBXFileReference; lastKnownFileType = text; path = addReview.json.stub; sourceTree = "<group>"; };
+		7ACE699520FC00DC00290A25 /* removeReview.json.stub */ = {isa = PBXFileReference; lastKnownFileType = text; path = removeReview.json.stub; sourceTree = "<group>"; };
+		7ACE699720FC02C900290A25 /* ReviewsRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsRequestFactory.swift; sourceTree = "<group>"; };
+		7ACE699920FC05E000290A25 /* ReviewsRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsRequestManager.swift; sourceTree = "<group>"; };
+		7ACE699B20FC06A900290A25 /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
 		7AE2CD6D20EE0924003792D6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7FEC1D693AC07A71C9A63721 /* Pods-e.bizhanovUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e.bizhanovUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-e.bizhanovUITests/Pods-e.bizhanovUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A7B2FC838CE82396D5363B46 /* Pods-e.bizhanovTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e.bizhanovTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-e.bizhanovTests/Pods-e.bizhanovTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -188,6 +202,7 @@
 				7A463B3620F3F0EE003332FC /* RequestFactoryMock.swift */,
 				7A2584D620E7E30B0030E644 /* Info.plist */,
 				7A15C51220F37ADA00861852 /* CatalogTests.swift */,
+				7ACE698F20FBF88F00290A25 /* ReviewTests.swift */,
 			);
 			path = e.bizhanovTests;
 			sourceTree = "<group>";
@@ -219,10 +234,12 @@
 				7A3BC8FF20EE1B250050CEC8 /* AuthRequestFactory.swift */,
 				7A17676E20EF305D00D38134 /* ProfileRequestFactory.swift */,
 				7A463B3B20F3F6DD003332FC /* CatalogRequestFactory.swift */,
+				7ACE699720FC02C900290A25 /* ReviewsRequestFactory.swift */,
 				7A2DBFDE20F2B3DC00C1759D /* RequestManager.swift */,
 				7A3BC90120EE1B430050CEC8 /* AuthRequestManager.swift */,
 				7A17677020EF34AC00D38134 /* ProfileRequestManager.swift */,
 				7A463B4220F47F06003332FC /* CatalogRequestManager.swift */,
+				7ACE699920FC05E000290A25 /* ReviewsRequestManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -232,6 +249,9 @@
 			children = (
 				7A463B4520F496B3003332FC /* catalogData.json.stub */,
 				7A463B4B20F4A8F3003332FC /* anotherProduct.json.stub */,
+				7ACE699120FBFD8400290A25 /* reviews.json.stub */,
+				7ACE699320FC002700290A25 /* addReview.json.stub */,
+				7ACE699520FC00DC00290A25 /* removeReview.json.stub */,
 			);
 			path = Stubs;
 			sourceTree = "<group>";
@@ -304,6 +324,7 @@
 				7A17677220EF353A00D38134 /* UserData.swift */,
 				7A463B3D20F3F7B8003332FC /* Products.swift */,
 				7A463B3F20F3F7D5003332FC /* FilterData.swift */,
+				7ACE699B20FC06A900290A25 /* Reviews.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -448,9 +469,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A2584CA20E7E30B0030E644 /* LaunchScreen.storyboard in Resources */,
+				7ACE699620FC00DC00290A25 /* removeReview.json.stub in Resources */,
+				7ACE699220FBFD8400290A25 /* reviews.json.stub in Resources */,
 				7A463B4720F4999E003332FC /* catalogData.json.stub in Resources */,
 				7A463B4C20F4A8F3003332FC /* anotherProduct.json.stub in Resources */,
 				7A2584C720E7E30B0030E644 /* Assets.xcassets in Resources */,
+				7ACE699420FC002700290A25 /* addReview.json.stub in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -573,9 +597,12 @@
 				7A17676F20EF305D00D38134 /* ProfileRequestFactory.swift in Sources */,
 				7A3BC90620EE1BAB0050CEC8 /* ResponseCodable.swift in Sources */,
 				7A3BC8FC20EE1ACE0050CEC8 /* AbstractErrorParser.swift in Sources */,
+				7ACE699C20FC06A900290A25 /* Reviews.swift in Sources */,
 				7AE2CD6E20EE0924003792D6 /* User.swift in Sources */,
+				7ACE699820FC02C900290A25 /* ReviewsRequestFactory.swift in Sources */,
 				7A463B4020F3F7D5003332FC /* FilterData.swift in Sources */,
 				7A463B3E20F3F7B8003332FC /* Products.swift in Sources */,
+				7ACE699A20FC05E100290A25 /* ReviewsRequestManager.swift in Sources */,
 				7A3BC90020EE1B250050CEC8 /* AuthRequestFactory.swift in Sources */,
 				7A2584C020E7E3080030E644 /* AppDelegate.swift in Sources */,
 				7A17677320EF353A00D38134 /* UserData.swift in Sources */,
@@ -596,6 +623,7 @@
 				7A463B4A20F4A01B003332FC /* HttpStubHelper.swift in Sources */,
 				7A463B3720F3F0EE003332FC /* RequestFactoryMock.swift in Sources */,
 				7A15C51320F37ADA00861852 /* CatalogTests.swift in Sources */,
+				7ACE699020FBF88F00290A25 /* ReviewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

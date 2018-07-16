@@ -11,7 +11,6 @@ class CatalogRequestManager: RequestManager, CatalogRequestFactory {
         self.request(request: requestModel, completionHandler: completionHandler)
     }
     
-    // FIXME: API не реализовано на сервере
     func product(
         withId id: Int,
         completionHandler: @escaping (DataResponse<Product>) -> Void) {
@@ -45,7 +44,6 @@ extension CatalogRequestManager {
         let baseUrl: URL
         let method: HTTPMethod = .get
         
-        // FIXME: Исправить при необходимости, после того как будет реализовано API
         let path: String = "anotherProduct.json"
         
         let productId: Int

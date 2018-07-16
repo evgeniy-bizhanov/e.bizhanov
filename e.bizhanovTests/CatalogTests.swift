@@ -3,6 +3,7 @@ import OHHTTPStubs
 @testable import e_bizhanov
 
 class CatalogTests: XCTestCase {
+    
     var request: CatalogRequestFactory!
     
     override func setUp() {
@@ -19,7 +20,7 @@ class CatalogTests: XCTestCase {
         OHHTTPStubs.removeAllStubs()
     }
     
-    func testGetProductsShouldReturnValue() {
+    func testProductsShouldReturnValue() {
         let exp = expectation(description: "")
         
         HTTPStubHelper.setup(forApiMethod: "catalogData.json")
@@ -35,7 +36,7 @@ class CatalogTests: XCTestCase {
         XCTAssertNotNil(data)
     }
     
-    func testGetAnotherProductShouldReturnValue() {
+    func testProductByIdShouldReturnValue() {
         let exp = expectation(description: "")
         HTTPStubHelper.setup(forApiMethod: "anotherProduct.json")
         
