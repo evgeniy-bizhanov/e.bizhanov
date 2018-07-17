@@ -1,24 +1,16 @@
-//
-//  ProfileRequestFactory.swift
-//  e.bizhanov
-//
-//  Created by Евгений Бижанов on 06.07.2018.
-//  Copyright © 2018 Евгений Бижанов. All rights reserved.
-//
-
 import Alamofire
 
 protocol CatalogRequestFactory {
     
     /**
-     Постранично получает список товаров на сервере
+     Постраничное получение списка товаров
      - Parameters:
        - pageNumber: Страница с товарами, которую необходимо запросить
        - filterData: Настраиваемый фильтр для отправки на сервер `FilterData`
      */
-    func getProducts(
-        pageNumber: Int,
-        filterData: FilterData,
+    func products(
+        fromPage page: Int,
+        withFilter filter: FilterData,
         completionHandler: @escaping (DataResponse<[Product]>) -> Void
     )
     
@@ -27,8 +19,8 @@ protocol CatalogRequestFactory {
      - Parameters:
        - productId: Данные пользователя `UserData`
      */
-    func getAnotherProduct(
-        productId: Int,
+    func product(
+        withId id: Int,
         completionHandler: @escaping (DataResponse<Product>) -> Void
     )
 }

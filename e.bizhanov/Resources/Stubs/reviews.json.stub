@@ -1,0 +1,15 @@
+{
+    "id_product": 123,
+    "reviews": [
+     {
+     "id_user": 456,
+     "id_comment": 789,
+     "text": "Lorem ipsum"
+     },
+     {
+     "id_user": 987,
+     "id_comment": 654,
+     "text": "Lorem ipsum"
+     }
+    ]
+}

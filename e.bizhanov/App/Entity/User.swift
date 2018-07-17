@@ -1,18 +1,6 @@
-//
-//  User.swift
-//  e.bizhanov
-//
-//  Created by Евгений Бижанов on 05.07.2018.
-//  Copyright © 2018 Евгений Бижанов. All rights reserved.
-//
-
 struct LoginResult: Codable {
     let result: Int
     let user: User
-}
-
-struct LogoutResult: Codable {
-    let result: Int
 }
 
 struct User: Codable {
