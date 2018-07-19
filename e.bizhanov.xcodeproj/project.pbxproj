@@ -51,6 +51,7 @@
 		7ACE699A20FC05E100290A25 /* ReviewsRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACE699920FC05E000290A25 /* ReviewsRequestManager.swift */; };
 		7ACE699C20FC06A900290A25 /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACE699B20FC06A900290A25 /* Reviews.swift */; };
 		7AE2CD6E20EE0924003792D6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE2CD6D20EE0924003792D6 /* User.swift */; };
+		7AE4F3232100870F0047581B /* Basket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE4F3222100870F0047581B /* Basket.swift */; };
 		AFCD319A7E7AA7D11E243995 /* Pods_e_bizhanov.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0275B7C3CD86EA722A4A944 /* Pods_e_bizhanov.framework */; };
 /* End PBXBuildFile section */
 
@@ -126,6 +127,7 @@
 		7ACE699920FC05E000290A25 /* ReviewsRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsRequestManager.swift; sourceTree = "<group>"; };
 		7ACE699B20FC06A900290A25 /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
 		7AE2CD6D20EE0924003792D6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7AE4F3222100870F0047581B /* Basket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basket.swift; sourceTree = "<group>"; };
 		7FEC1D693AC07A71C9A63721 /* Pods-e.bizhanovUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e.bizhanovUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-e.bizhanovUITests/Pods-e.bizhanovUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A7B2FC838CE82396D5363B46 /* Pods-e.bizhanovTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e.bizhanovTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-e.bizhanovTests/Pods-e.bizhanovTests.release.xcconfig"; sourceTree = "<group>"; };
 		C9D2158E3CCB0F3A25D7FFAB /* Pods-e.bizhanov.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e.bizhanov.release.xcconfig"; path = "Pods/Target Support Files/Pods-e.bizhanov/Pods-e.bizhanov.release.xcconfig"; sourceTree = "<group>"; };
@@ -345,6 +347,7 @@
 				7A463B3D20F3F7B8003332FC /* Products.swift */,
 				7A463B3F20F3F7D5003332FC /* FilterData.swift */,
 				7ACE699B20FC06A900290A25 /* Reviews.swift */,
+				7AE4F3222100870F0047581B /* Basket.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -622,6 +625,7 @@
 				7A3BC90620EE1BAB0050CEC8 /* ResponseCodable.swift in Sources */,
 				7A3BC8FC20EE1ACE0050CEC8 /* AbstractErrorParser.swift in Sources */,
 				7A79841D20FF957F0031CFB4 /* BasketRequestFactory.swift in Sources */,
+				7AE4F3232100870F0047581B /* Basket.swift in Sources */,
 				7ACE699C20FC06A900290A25 /* Reviews.swift in Sources */,
 				7AE2CD6E20EE0924003792D6 /* User.swift in Sources */,
 				7ACE699820FC02C900290A25 /* ReviewsRequestFactory.swift in Sources */,
