@@ -6,13 +6,13 @@ import Foundation
 
 // MARK: - Adding
 /// Результат добавления товара в корзину
-struct AddingToBasketResult: Codable {
+struct AddToBasketResult: Codable {
     let result: Int
 }
 
 // MARK: - Deleting
 /// Результат удаления товара из корзины
-struct DeletingFromBasketResult: Codable {
+struct DeleteFromBasketResult: Codable {
     let result: Int
 }
 
@@ -41,7 +41,7 @@ struct BasketItem: Codable {
 
 // MARK: - Paying
 /// Результат оплаты корзины пользователя
-struct PayingBasketResult: Codable {
+struct PayBasketResult: Codable {
     let result: Int
     let userMessage: String
 }

@@ -1,5 +1,8 @@
 import Alamofire
 
+/**
+ Позволяет работать с отзывами пользователя, добавлять, удалять и получать их
+ */
 class ReviewsRequestManager: RequestManager, ReviewsRequestFactory {
     func reviews(
         forProduct productId: Int,

@@ -16,7 +16,7 @@ protocol BasketRequestFactory {
     func addProductToBasket(
         byId productId: Int,
         withQuantity quantity: Int,
-        completionHandler: @escaping Completion<AddingToBasketResult>
+        completionHandler: @escaping Completion<AddToBasketResult>
     )
     
     /**
@@ -26,20 +26,20 @@ protocol BasketRequestFactory {
      */
     func deleteProductFromBasket(
         byId productId: Int,
-        completionHandler: Completion<DeletingFromBasketResult>
+        completionHandler: @escaping Completion<DeleteFromBasketResult>
     )
     
     /**
      Получает товары находящиеся в корзине пользователя
      */
     func basket(
-        completionHandler: Completion<BasketResult>
+        completionHandler: @escaping Completion<BasketResult>
     )
     
     /**
      Оплачивает товары находящиеся в корзине пользователя
      */
     func payBasket(
-        completionHandler: Completion<PayingBasketResult>
+        completionHandler: @escaping Completion<PayBasketResult>
     )
 }

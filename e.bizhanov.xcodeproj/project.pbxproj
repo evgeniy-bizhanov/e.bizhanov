@@ -35,6 +35,7 @@
 		7A463B4720F4999E003332FC /* catalogData.json.stub in Resources */ = {isa = PBXBuildFile; fileRef = 7A463B4520F496B3003332FC /* catalogData.json.stub */; };
 		7A463B4A20F4A01B003332FC /* HttpStubHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A463B4920F4A01B003332FC /* HttpStubHelper.swift */; };
 		7A463B4C20F4A8F3003332FC /* anotherProduct.json.stub in Resources */ = {isa = PBXBuildFile; fileRef = 7A463B4B20F4A8F3003332FC /* anotherProduct.json.stub */; };
+		7A74BB3221008BA3005840A9 /* BasketRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A74BB3121008BA3005840A9 /* BasketRequestManager.swift */; };
 		7A79841420FF885E0031CFB4 /* BasketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A79841320FF885E0031CFB4 /* BasketTests.swift */; };
 		7A79841620FF8B7A0031CFB4 /* addToBasket.json.stub in Resources */ = {isa = PBXBuildFile; fileRef = 7A79841520FF8B7A0031CFB4 /* addToBasket.json.stub */; };
 		7A79841820FF8B900031CFB4 /* deleteFromBasket.json.stub in Resources */ = {isa = PBXBuildFile; fileRef = 7A79841720FF8B900031CFB4 /* deleteFromBasket.json.stub */; };
@@ -110,11 +111,11 @@
 		7A463B4520F496B3003332FC /* catalogData.json.stub */ = {isa = PBXFileReference; lastKnownFileType = text; path = catalogData.json.stub; sourceTree = "<group>"; };
 		7A463B4920F4A01B003332FC /* HttpStubHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpStubHelper.swift; sourceTree = "<group>"; };
 		7A463B4B20F4A8F3003332FC /* anotherProduct.json.stub */ = {isa = PBXFileReference; lastKnownFileType = text; path = anotherProduct.json.stub; sourceTree = "<group>"; };
+		7A74BB3121008BA3005840A9 /* BasketRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketRequestManager.swift; sourceTree = "<group>"; };
 		7A79841320FF885E0031CFB4 /* BasketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketTests.swift; sourceTree = "<group>"; };
 		7A79841520FF8B7A0031CFB4 /* addToBasket.json.stub */ = {isa = PBXFileReference; lastKnownFileType = text; path = addToBasket.json.stub; sourceTree = "<group>"; };
 		7A79841720FF8B900031CFB4 /* deleteFromBasket.json.stub */ = {isa = PBXFileReference; lastKnownFileType = text; path = deleteFromBasket.json.stub; sourceTree = "<group>"; };
 		7A79841920FF8BA80031CFB4 /* getBasket.json.stub */ = {isa = PBXFileReference; lastKnownFileType = text; path = getBasket.json.stub; sourceTree = "<group>"; };
-		7A79841B20FF91670031CFB4 /* addToBasketZero.json.stub */ = {isa = PBXFileReference; lastKnownFileType = text; path = addToBasketZero.json.stub; sourceTree = "<group>"; };
 		7A79841C20FF957F0031CFB4 /* BasketRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketRequestFactory.swift; sourceTree = "<group>"; };
 		7A79841E210080560031CFB4 /* payBasket.json.stub */ = {isa = PBXFileReference; lastKnownFileType = text; path = payBasket.json.stub; sourceTree = "<group>"; };
 		7A90159820EE89C900E63F9F /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
@@ -257,6 +258,7 @@
 				7A17677020EF34AC00D38134 /* ProfileRequestManager.swift */,
 				7A463B4220F47F06003332FC /* CatalogRequestManager.swift */,
 				7ACE699920FC05E000290A25 /* ReviewsRequestManager.swift */,
+				7A74BB3121008BA3005840A9 /* BasketRequestManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -270,7 +272,6 @@
 				7ACE699320FC002700290A25 /* addReview.json.stub */,
 				7ACE699520FC00DC00290A25 /* removeReview.json.stub */,
 				7A79841520FF8B7A0031CFB4 /* addToBasket.json.stub */,
-				7A79841B20FF91670031CFB4 /* addToBasketZero.json.stub */,
 				7A79841720FF8B900031CFB4 /* deleteFromBasket.json.stub */,
 				7A79841920FF8BA80031CFB4 /* getBasket.json.stub */,
 				7A79841E210080560031CFB4 /* payBasket.json.stub */,
@@ -619,6 +620,7 @@
 				7A3BC90420EE1B800050CEC8 /* AbstractRequestManager.swift in Sources */,
 				7A17677120EF34AC00D38134 /* ProfileRequestManager.swift in Sources */,
 				7A90159920EE89C900E63F9F /* Register.swift in Sources */,
+				7A74BB3221008BA3005840A9 /* BasketRequestManager.swift in Sources */,
 				7A463B3C20F3F6DD003332FC /* CatalogRequestFactory.swift in Sources */,
 				7A2DBFDF20F2B3DC00C1759D /* RequestManager.swift in Sources */,
 				7A17676F20EF305D00D38134 /* ProfileRequestFactory.swift in Sources */,

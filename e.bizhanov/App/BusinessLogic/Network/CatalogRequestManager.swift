@@ -1,5 +1,8 @@
 import Alamofire
 
+/**
+ Позволяет работать с каталогом магазина
+ */
 class CatalogRequestManager: RequestManager, CatalogRequestFactory {
 
     // MARK: - Functions

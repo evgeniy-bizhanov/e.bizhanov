@@ -55,3 +55,14 @@ extension RequestFactory {
             queue: sessionQueue) as? T
     }
 }
+
+// MARK: - Basket manager
+extension RequestFactory {
+    func makeBasketRequestFactory<T>() -> T! {
+        let errorParser = makeErrorParser()
+        return BasketRequestManager(
+            errorParser: errorParser,
+            sessionManager: commonSessionManager,
+            queue: sessionQueue) as? T
+    }
+}
