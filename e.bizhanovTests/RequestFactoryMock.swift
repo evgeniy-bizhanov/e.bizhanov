@@ -58,11 +58,22 @@ extension RequestFactoryMock {
     }
 }
 
-// MARK: - Catalog manager
+// MARK: - Reviews manager
 extension RequestFactoryMock {
     func makeReviewsRequestFactory<T>() -> T! {
         let errorParser = makeErrorParser()
         return ReviewsRequestManager(
+            errorParser: errorParser,
+            sessionManager: commonSessionManager,
+            queue: sessionQueue) as? T
+    }
+}
+
+// MARK: - Basket manager
+extension RequestFactoryMock {
+    func makeBasketRequestFactory<T>() -> T! {
+        let errorParser = makeErrorParser()
+        return BasketRequestManager(
             errorParser: errorParser,
             sessionManager: commonSessionManager,
             queue: sessionQueue) as? T
