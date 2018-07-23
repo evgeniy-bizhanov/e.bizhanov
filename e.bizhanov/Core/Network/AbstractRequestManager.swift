@@ -14,6 +14,12 @@ protocol AbstractRequestManager {
     func request<T: Decodable>(
         request: URLRequestConvertible,
         completionHandler: @escaping Completion<T>) -> DataRequest
+    
+    init (
+        errorParser: ​AbstractErrorParser​,
+        sessionManager: SessionManager,
+        queue: DispatchQueue?
+    )
 }
 
 extension AbstractRequestManager {
