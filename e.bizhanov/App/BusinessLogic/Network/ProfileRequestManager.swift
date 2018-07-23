@@ -9,6 +9,7 @@ class ProfileRequestManager: RequestManager, ProfileRequestFactory {
     func change(
         profile: UserData,
         completionHandler: @escaping (DataResponse<ChangeUserDataResult>) -> Void) {
+        
         let requestModel = Profile(baseUrl: baseUrl, userData: profile)
         self.request(request: requestModel, completionHandler: completionHandler)
     }

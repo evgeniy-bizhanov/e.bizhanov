@@ -34,7 +34,7 @@ class BasketRequestManager: RequestManager, BasketRequestFactory {
     func basket(
         completionHandler: @escaping Completion<BasketResult>) {
         
-        let request = GetBasketRequest(baseUrl: baseUrl)
+        let request = BasketRequest(baseUrl: baseUrl)
         self.request(request: request, completionHandler: completionHandler)
     }
     
@@ -84,7 +84,7 @@ extension BasketRequestManager {
 
 // MARK: - Getting product router
 extension BasketRequestManager {
-    struct GetBasketRequest: RequestRouter {
+    struct BasketRequest: RequestRouter {
         let baseUrl: URL
         let method: HTTPMethod = .get
         let path: String = "getBasket.json"

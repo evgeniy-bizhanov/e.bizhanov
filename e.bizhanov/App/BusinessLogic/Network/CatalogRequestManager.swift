@@ -10,6 +10,7 @@ class CatalogRequestManager: RequestManager, CatalogRequestFactory {
         fromPage page: Int,
         withFilter filter: FilterData,
         completionHandler: @escaping (DataResponse<[Product]>) -> Void) {
+        
         let requestModel = ProductsRequest(baseUrl: baseUrl, pageNumber: page, filterData: filter)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
@@ -17,6 +18,7 @@ class CatalogRequestManager: RequestManager, CatalogRequestFactory {
     func product(
         withId id: Int,
         completionHandler: @escaping (DataResponse<Product>) -> Void) {
+        
         let requestModel = ProductRequest(baseUrl: baseUrl, productId: id)
         self.request(request: requestModel, completionHandler: completionHandler)
     }

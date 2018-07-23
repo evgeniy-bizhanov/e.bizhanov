@@ -10,6 +10,7 @@ class AuthRequestManager: RequestManager, AuthRequestFactory {
         userName: String,
         password: String,
         completionHandler: @escaping (DataResponse<LoginResult>) -> Void) {
+        
         let requestModel = Login(baseUrl: baseUrl, login: userName, password: password)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
@@ -22,6 +23,7 @@ class AuthRequestManager: RequestManager, AuthRequestFactory {
     func register(
         userData: UserData,
         completionHandler: @escaping (DataResponse<RegisterResult>) -> Void) {
+        
         let requestModel = Register(baseUrl: baseUrl, userData: userData)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
