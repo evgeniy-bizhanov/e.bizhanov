@@ -17,5 +17,4 @@ protocol AuthRequestFactory {
         userData: UserData,
         completionHandler: @escaping (DataResponse<RegisterResult>) -> Void
     )
-    
 }

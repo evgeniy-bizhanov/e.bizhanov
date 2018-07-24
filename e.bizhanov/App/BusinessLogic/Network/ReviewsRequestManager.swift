@@ -7,6 +7,7 @@ class ReviewsRequestManager: RequestManager, ReviewsRequestFactory {
     func reviews(
         forProduct productId: Int,
         completionHandler: @escaping (DataResponse<Reviews>) -> Void) {
+        
         let requestModel = ReviewsRequest(baseUrl: baseUrl, productId: productId)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
@@ -16,6 +17,7 @@ class ReviewsRequestManager: RequestManager, ReviewsRequestFactory {
         withMessage message: String,
         toProduct productId: Int,
         completionHandler: @escaping (DataResponse<AddReviewResult>) -> Void) {
+        
         let requestModel = AddReviewRequest(baseUrl: baseUrl, userId: userId, productId: productId, message: message)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
@@ -23,6 +25,7 @@ class ReviewsRequestManager: RequestManager, ReviewsRequestFactory {
     func removeReview(
         _ reviewId: Int,
         completionHandler: @escaping (DataResponse<RemoveReviewResult>) -> Void) {
+        
         let requestModel = RemoveReviewRequest(baseUrl: baseUrl, reviewId: reviewId)
         self.request(request: requestModel, completionHandler: completionHandler)
     }

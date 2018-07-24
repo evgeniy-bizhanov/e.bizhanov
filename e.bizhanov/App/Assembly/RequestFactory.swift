@@ -21,48 +21,13 @@ class RequestFactory {
     func makeErrorParser() -> ​AbstractErrorParser​ {
         return ErrorParser()
     }
-}
-
-// MARK: - Auth manager
-extension RequestFactory {
-    func makeAuthRequestFactory<T>() -> T! {
-        let errorParser = makeErrorParser()
-        return AuthRequestManager(
+    
+    func makeFactory<T: AbstractRequestManager>(service: T.Type) throws -> T {
+        let errorParser = try Container.shared.resolve(service: ​AbstractErrorParser​.self)
+        return T(
             errorParser: errorParser,
             sessionManager: commonSessionManager,
-            queue: sessionQueue) as? T
-    }
-}
-
-// MARK: - Profile manager
-extension RequestFactory {
-    func makeProfileRequestFactory<T>() -> T! {
-        let errorParser = makeErrorParser()
-        return ProfileRequestManager(
-            errorParser: errorParser,
-            sessionManager: commonSessionManager,
-            queue: sessionQueue) as? T
-    }
-}
-
-// MARK: - Catalog manager
-extension RequestFactory {
-    func makeCatalogRequestFactory<T>() -> T! {
-        let errorParser = makeErrorParser()
-        return CatalogRequestManager(
-            errorParser: errorParser,
-            sessionManager: commonSessionManager,
-            queue: sessionQueue) as? T
-    }
-}
-
-// MARK: - Basket manager
-extension RequestFactory {
-    func makeBasketRequestFactory<T>() -> T! {
-        let errorParser = makeErrorParser()
-        return BasketRequestManager(
-            errorParser: errorParser,
-            sessionManager: commonSessionManager,
-            queue: sessionQueue) as? T
+            queue: sessionQueue
+        )
     }
 }

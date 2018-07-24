@@ -13,9 +13,7 @@ class BasketTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        
-        let factory = RequestFactoryMock()
-        request = factory.makeBasketRequestFactory()
+        request = try! Container.shared.resolve(service: BasketRequestFactory.self)
     }
     
     override func tearDown() {
