@@ -13,7 +13,7 @@ enum ContainerError: Error {
 /// Контейнер зависимостей
 final class Container {
     
-    typealias Initializer = (Resolver) -> Any
+    typealias Initializer = (Resolver) throws -> Any
     typealias Instance = Any
     
     typealias Factory = (
@@ -64,14 +64,13 @@ extension Container: ScopeResolver {
 extension Container: Resolver {
     
     func resolve<T>(service: T.Type) throws -> T {
-        print(service)
         let key = Key(service)
         
         guard var factory = dictionary[key] else {
             throw ContainerError.notFound(service)
         }
         
-        guard let instance = (factory.instance ?? factory.init(self)) as? T else {
+        guard let instance = try (factory.instance ?? factory.init(self)) as? T else {
             throw ContainerError.castFailure(service)
         }
         

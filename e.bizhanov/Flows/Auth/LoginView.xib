@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginView" customModule="e_bizhanov" customModuleProvider="target">
+            <connections>
+                <outlet property="loginButton" destination="BPg-rr-Hzy" id="zNN-eI-OXz"/>
+                <outlet property="loginField" destination="U6G-l4-U7k" id="HXW-iv-rJL"/>
+                <outlet property="passwordField" destination="nr8-kf-sb6" id="RYT-hu-g7F"/>
+                <outlet property="registerButton" destination="tUm-ME-CyG" id="2V6-lR-PPI"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="432"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tUm-ME-CyG">
+                    <rect key="frame" x="141.5" y="288" width="92" height="30"/>
+                    <state key="normal" title="Регистрация"/>
+                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tpM-nR-cTS">
+                    <rect key="frame" x="64" y="212" width="247" height="68"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Имя пользователя" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="U6G-l4-U7k">
+                            <rect key="frame" x="0.0" y="0.0" width="247" height="30"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="username"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nr8-kf-sb6">
+                            <rect key="frame" x="0.0" y="38" width="247" height="30"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BPg-rr-Hzy">
+                    <rect key="frame" x="165" y="382" width="44" height="30"/>
+                    <state key="normal" title="Войти"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.73077624200000002" green="1" blue="0.75896146440000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="BPg-rr-Hzy" firstAttribute="top" secondItem="tUm-ME-CyG" secondAttribute="bottom" constant="64" id="9DV-K7-xb4"/>
+                <constraint firstItem="BPg-rr-Hzy" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Ies-FE-Ftn"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="BPg-rr-Hzy" secondAttribute="bottom" constant="20" id="P3U-6G-uF2"/>
+                <constraint firstItem="tpM-nR-cTS" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="QEq-go-3iX"/>
+                <constraint firstItem="tUm-ME-CyG" firstAttribute="top" secondItem="tpM-nR-cTS" secondAttribute="bottom" constant="8" id="clw-Y1-Htk"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="tpM-nR-cTS" secondAttribute="trailing" constant="64" id="tp6-C7-4cT"/>
+                <constraint firstItem="tUm-ME-CyG" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="v8x-lt-0AP"/>
+                <constraint firstItem="tpM-nR-cTS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="64" id="wGQ-ma-0MQ"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="33.5" y="127"/>
+        </view>
+    </objects>
+</document>

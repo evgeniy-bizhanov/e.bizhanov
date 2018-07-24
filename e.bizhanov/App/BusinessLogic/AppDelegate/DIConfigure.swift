@@ -52,10 +52,6 @@ extension AppDelegate {
         }
         
         // MARK: - Factories
-        Container.shared.register(AuthRequestFactory.self) { resolver in
-            makeFactory(AuthRequestManager.self, resolver: resolver)
-        }
-        
         Container.shared.register(CatalogRequestFactory.self) { resolver in
             makeFactory(CatalogRequestManager.self, resolver: resolver)
         }
@@ -66,6 +62,15 @@ extension AppDelegate {
         
         Container.shared.register(BasketRequestFactory.self) { resolver in
             makeFactory(BasketRequestManager.self, resolver: resolver)
+        }
+        
+        // MARK: - Auth
+        Container.shared.register(AuthRequestFactory.self) { resolver in
+            makeFactory(AuthRequestManager.self, resolver: resolver)
+        }
+        
+        Container.shared.register(LoginViewModel.self) { resolver in
+            LoginViewModel(service: try resolver.resolve(service: AuthRequestFactory.self))
         }
     }
 }
