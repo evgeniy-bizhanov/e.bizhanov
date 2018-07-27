@@ -54,6 +54,7 @@ extension UIView {
 
 // MARK: - UIViewController
 extension UIViewController {
+    // Рекурсия
     /**
       Рекурсивный поиск всех `T: UIView` удовлетворяющих условию фильтра
     
@@ -64,19 +65,19 @@ extension UIViewController {
     
       - Returns: возвращает коллекцию элементов наследуемых от `UIView` и удовлетворяющих критериям выборки
       */
-    func findViews<T: UIView>(in view: UIView, withFilter filter: @escaping (_ item: T) -> Bool) -> [T] {
-        var views = [T]()
+    func views<T: UIView>(in view: UIView, withFilter filter: @escaping (_ item: T) -> Bool) -> [T] {
+        var result = [T]()
         
         for view in view.subviews {
-            views.append(contentsOf: findViews(in: view, withFilter: filter))
+            result.append(contentsOf: views(in: view, withFilter: filter))
         }
         
         if let view = view as? T,
             filter(view) {
-            views.append(view)
+            result.append(view)
         }
         
-        return views
+        return result
     }
 }
 

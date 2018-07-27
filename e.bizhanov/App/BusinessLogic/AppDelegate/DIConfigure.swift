@@ -44,8 +44,7 @@ extension AppDelegate {
         Container.shared
             .register(SessionManager.self) { _ in
                 prepareSessionManager()
-            }
-            .inScope(.singleton)
+            }.inScope(.singleton)
         
         Container.shared.register(​AbstractErrorParser​.self) { _ in
             ErrorParser()

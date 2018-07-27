@@ -32,16 +32,14 @@ final class LoginViewModel {
     
     // Настраивает логику проверки модели на корректность
     fileprivate func setupModelValidationRules() {
-        let loginIsValid = login.ignoreNil().map {
-            $0 != ""
-        }
         
-        let passwordIsValid = password.ignoreNil().map {
-            $0.count >= 4
-        }
+        // Здесь таки функторы как я понимаю + функция высшего порядка
+        let loginIsValid = login.ignoreNil().map { $0 != "" }
+        let passwordIsValid = password.ignoreNil().map { $0.count >= 4 }
         
         // Собираем общий флаг
-        combineLatest(loginIsValid, passwordIsValid).map { $0 && $1 }
+        combineLatest(loginIsValid, passwordIsValid)
+            .map { $0 && $1 }
             .bind(to: isValid)
     }
     

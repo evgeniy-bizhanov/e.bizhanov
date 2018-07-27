@@ -39,6 +39,7 @@
 		7A463B4720F4999E003332FC /* catalogData.json.stub in Resources */ = {isa = PBXBuildFile; fileRef = 7A463B4520F496B3003332FC /* catalogData.json.stub */; };
 		7A463B4A20F4A01B003332FC /* HttpStubHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A463B4920F4A01B003332FC /* HttpStubHelper.swift */; };
 		7A463B4C20F4A8F3003332FC /* anotherProduct.json.stub in Resources */ = {isa = PBXBuildFile; fileRef = 7A463B4B20F4A8F3003332FC /* anotherProduct.json.stub */; };
+		7A5BBBF9210B2F8900D98B88 /* AbstractContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5BBBF8210B2F8900D98B88 /* AbstractContainer.swift */; };
 		7A74BB3221008BA3005840A9 /* BasketRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A74BB3121008BA3005840A9 /* BasketRequestManager.swift */; };
 		7A79841420FF885E0031CFB4 /* BasketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A79841320FF885E0031CFB4 /* BasketTests.swift */; };
 		7A79841620FF8B7A0031CFB4 /* addToBasket.json.stub in Resources */ = {isa = PBXBuildFile; fileRef = 7A79841520FF8B7A0031CFB4 /* addToBasket.json.stub */; };
@@ -128,6 +129,7 @@
 		7A463B4520F496B3003332FC /* catalogData.json.stub */ = {isa = PBXFileReference; lastKnownFileType = text; path = catalogData.json.stub; sourceTree = "<group>"; };
 		7A463B4920F4A01B003332FC /* HttpStubHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpStubHelper.swift; sourceTree = "<group>"; };
 		7A463B4B20F4A8F3003332FC /* anotherProduct.json.stub */ = {isa = PBXFileReference; lastKnownFileType = text; path = anotherProduct.json.stub; sourceTree = "<group>"; };
+		7A5BBBF8210B2F8900D98B88 /* AbstractContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractContainer.swift; sourceTree = "<group>"; };
 		7A74BB3121008BA3005840A9 /* BasketRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketRequestManager.swift; sourceTree = "<group>"; };
 		7A79841320FF885E0031CFB4 /* BasketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketTests.swift; sourceTree = "<group>"; };
 		7A79841520FF8B7A0031CFB4 /* addToBasket.json.stub */ = {isa = PBXFileReference; lastKnownFileType = text; path = addToBasket.json.stub; sourceTree = "<group>"; };
@@ -407,6 +409,7 @@
 			children = (
 				7A7B33332105162200FCCEC5 /* Resolver.swift */,
 				7A7B33372105CE2F00FCCEC5 /* ScopeResolver.swift */,
+				7A5BBBF8210B2F8900D98B88 /* AbstractContainer.swift */,
 				7A7B33312105160400FCCEC5 /* Container.swift */,
 			);
 			path = DI;
@@ -691,6 +694,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A7B333621051D5B00FCCEC5 /* Key.swift in Sources */,
+				7A5BBBF9210B2F8900D98B88 /* AbstractContainer.swift in Sources */,
 				7A3BC90420EE1B800050CEC8 /* AbstractRequestManager.swift in Sources */,
 				7A17677120EF34AC00D38134 /* ProfileRequestManager.swift in Sources */,
 				7A90159920EE89C900E63F9F /* Register.swift in Sources */,

@@ -28,7 +28,7 @@ extension UIBaseViewController {
         var index = 0
         
         // Ищем все элементы, которые могут быть firstResponder
-        let responders = findViews(in: view, withFilter: isCanBecomeFirstResponder)
+        let responders = views(in: view, withFilter: isCanBecomeFirstResponder)
         for responder in responders {
             assignResponderDelegate(responder)
             responder.tag = index

@@ -9,11 +9,23 @@ enum ContainerError: Error {
     case castFailure(Any.Type)
 }
 
+// Что то страшное наворотил я 🤔
+/// Результат работы регистрации зависимости DI-контейнера
+enum Result<T: ScopeResolver> {
+    case success(T, Key)
+    
+    func inScope(_ scope: Scope) {
+        switch self {
+        case .success(let target, let key):
+            target.inScope(scope, key: key)
+        }
+    }
+}
+
 // MARK: - Container
 /// Контейнер зависимостей
-final class Container {
-    
-    typealias Initializer = (Resolver) throws -> Any
+final class Container: AbstractContainer {
+
     typealias Instance = Any
     
     typealias Factory = (
@@ -23,7 +35,6 @@ final class Container {
     )
     
     private var dictionary = [Key: Factory]()
-    private var lastKey: Key? // Нужно как-то опотокобезопасить)
     
     /**
      Регистрация зависимостей в контейнере
@@ -32,30 +43,25 @@ final class Container {
      - Parameter factory: Фабрика, с помощью которой разрешается зависимость
      */
     @discardableResult
-    func register(_ service: Any.Type, factory: @escaping Initializer) -> ScopeResolver {
+    func register(_ service: Any.Type, factory: @escaping Initializer) -> Result<Container> {
         let key = Key(service)
         let value: Factory = (factory, .default, nil)
-        
+
         dictionary[key] = value
-        lastKey = key
-        
-        return self
+
+        return .success(self, key)
     }
     
     // Не уверен на счет синглтона, но пусть пока будет так,
     // наверное надо инстанцировать в начале запуска, что бы не было соблазна
     // использовать еще где то в коде
     private init() {}
-    public static let shared = Container()
+    public static let shared = Container() as AbstractContainer & Resolver
 }
 
 // MARK: - ScopeResolver
 extension Container: ScopeResolver {
-    func inScope(_ scope: Scope) {
-        guard let key = lastKey else {
-            return
-        }
-        
+    func inScope(_ scope: Scope, key: Key) {
         dictionary[key]?.scope = scope
     }
 }
