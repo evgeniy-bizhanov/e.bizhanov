@@ -17,5 +17,5 @@ protocol ScopeResolver {
     /// Указывает на необходимость создания экземпляра как синглтон
     ///
     /// - Parameter scope: Тип создаваемого экземпляра `Scope`
-    func inScope(_ scope: Scope)
+    func inScope(_ scope: Scope, key: Key)
 }

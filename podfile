@@ -10,6 +10,7 @@ target 'e.bizhanov' do
   pod 'Alamofire', '~> 4.7'
   pod 'OHHTTPStubs/Swift', '~> 6.1.0'
   pod 'Bond', '~> 6.8'
+  pod 'Swinject', '~> 2.4'
 
   target 'e.bizhanovTests' do
     inherit! :search_paths
