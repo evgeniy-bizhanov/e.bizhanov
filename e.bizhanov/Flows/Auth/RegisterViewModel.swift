@@ -17,6 +17,7 @@ class RegisterViewModel {
     let login = Observable<String?>(nil)
     let password = Observable<String?>(nil)
     let confirmPassword = Observable<String?>(nil)
+    let email = Observable<String?>(nil)
     let creditCard = Observable<String?>(nil)
     let gender = Observable<Gender?>(nil)
     let isValid = Observable<Bool>(false)
@@ -38,11 +39,6 @@ class RegisterViewModel {
         
         rules.append(
             combineLatest(password, confirmPassword).map { $0 == $1 }
-        )
-        
-        // Пол выбран
-        rules.append(
-            gender.map { $0 != nil }
         )
     }
     
