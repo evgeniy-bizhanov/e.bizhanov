@@ -8,7 +8,7 @@ import UIKit
 /// Контроллер входа в приложение
 final class LoginViewController: UIScrollViewController {
     // MARK: - IBOutlets
-    @IBOutlet weak var contentView: LoginView!
+    @IBOutlet weak var content: LoginView!
     
     // MARK: - Models
     var viewModel: LoginViewModel? {
@@ -23,6 +23,7 @@ final class LoginViewController: UIScrollViewController {
     // MARK: - IBActions
     @IBAction func unwindToLogin(sender: UIStoryboardSegue) { }
     
+    
     // MARK: - Functions
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,20 +32,28 @@ final class LoginViewController: UIScrollViewController {
             return
         }
         
-        contentView.loginField.reactive.text ~ viewModel.login
-        contentView.passwordField.reactive.text ~ viewModel.password
+        content.login.reactive.text ~ viewModel.login
+        content.password.reactive.text ~ viewModel.password
         
-        contentView.loginButton.reactive.isEnabled <~ viewModel.isValid
+        content.loginButton.reactive.isEnabled <~ viewModel.isValid
         
-        _ = contentView.loginButton.reactive.tap.observeNext { _ in
-            viewModel.enter()
+        let loginCompletionHandler: () -> Void = { [unowned self] in
+            self.performSegue(withIdentifier: "productsSegue", sender: nil)
+        }
+        
+        _ = content.loginButton.reactive.tap.observeNext { _ in
+            viewModel.enter(completionHandler: loginCompletionHandler)
+        }
+        
+        _ = content.registerButton.reactive.tap.observeNext { [unowned self] _ in
+            self.performSegue(withIdentifier: "registerSegue", sender: nil)
         }
     }
 }
 
 extension LoginViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if let nextField = contentView.viewWithTag(textField.tag + 1) as? UITextField {
+        if let nextField = content.viewWithTag(textField.tag + 1) as? UITextField {
             nextField.becomeFirstResponder()
         } else {
             textField.resignFirstResponder()
