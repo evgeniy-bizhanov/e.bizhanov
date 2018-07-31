@@ -22,6 +22,7 @@
 		7A2584C720E7E30B0030E644 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A2584C620E7E30B0030E644 /* Assets.xcassets */; };
 		7A2584CA20E7E30B0030E644 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A2584C820E7E30B0030E644 /* LaunchScreen.storyboard */; };
 		7A2584E020E7E30C0030E644 /* e_bizhanovUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2584DF20E7E30C0030E644 /* e_bizhanovUITests.swift */; };
+		7A280DBC21100FCE0047105D /* IBExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A280DBB21100FCE0047105D /* IBExtensions.swift */; };
 		7A2DBFDD20F2B31800C1759D /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DBFDC20F2B31800C1759D /* AppConfig.swift */; };
 		7A2DBFDF20F2B3DC00C1759D /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DBFDE20F2B3DC00C1759D /* RequestManager.swift */; };
 		7A3BC8FC20EE1ACE0050CEC8 /* AbstractErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3BC8FB20EE1ACE0050CEC8 /* AbstractErrorParser.swift */; };
@@ -112,6 +113,7 @@
 		7A2584DB20E7E30C0030E644 /* e.bizhanovUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = e.bizhanovUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A2584DF20E7E30C0030E644 /* e_bizhanovUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = e_bizhanovUITests.swift; sourceTree = "<group>"; };
 		7A2584E120E7E30C0030E644 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A280DBB21100FCE0047105D /* IBExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBExtensions.swift; sourceTree = "<group>"; };
 		7A2DBFDC20F2B31800C1759D /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		7A2DBFDE20F2B3DC00C1759D /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		7A3BC8FB20EE1ACE0050CEC8 /* AbstractErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractErrorParser.swift; sourceTree = "<group>"; };
@@ -338,6 +340,7 @@
 			children = (
 				7A0F290621064FE40054E4A8 /* ReactiveOperators.swift */,
 				7AA270B521064B4100628A1E /* Extensions.swift */,
+				7A280DBB21100FCE0047105D /* IBExtensions.swift */,
 				7A7B333521051D5B00FCCEC5 /* Key.swift */,
 				7AFC062E210649AC0047FBE2 /* ViewController */,
 				7A7B3330210515D700FCCEC5 /* DI */,
@@ -708,6 +711,7 @@
 				7AA270B421064B0100628A1E /* UIScrollViewController.swift in Sources */,
 				7A3BC90620EE1BAB0050CEC8 /* ResponseCodable.swift in Sources */,
 				7A3BC8FC20EE1ACE0050CEC8 /* AbstractErrorParser.swift in Sources */,
+				7A280DBC21100FCE0047105D /* IBExtensions.swift in Sources */,
 				7A79841D20FF957F0031CFB4 /* BasketRequestFactory.swift in Sources */,
 				7A0F290521064D0E0054E4A8 /* UIBaseViewController.swift in Sources */,
 				7AE4F3232100870F0047581B /* Basket.swift in Sources */,

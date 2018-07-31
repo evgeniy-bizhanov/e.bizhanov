@@ -1,4 +1,5 @@
 import Bond
+import Swinject
 import UIKit
 
 /// Форма входа в приложение
