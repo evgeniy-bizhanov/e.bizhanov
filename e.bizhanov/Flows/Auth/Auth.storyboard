@@ -47,10 +47,11 @@
                     </view>
                     <connections>
                         <outlet property="contentView" destination="PHd-Jn-csl" id="UX7-8h-kma"/>
-                        <segue destination="RFy-ie-Lb7" kind="show" identifier="" id="9fu-6H-7uG"/>
+                        <segue destination="RFy-ie-Lb7" kind="show" identifier="registerSegue" id="9fu-6H-7uG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g06-X7-tkZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Awt-px-DO5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="28" y="33"/>
         </scene>
@@ -91,6 +92,7 @@
                     </view>
                     <connections>
                         <outlet property="content" destination="46R-bG-Vn0" id="f4j-w4-hwN"/>
+                        <segue destination="Awt-px-DO5" kind="unwind" unwindAction="unwindToLoginWithSender:" id="doR-3u-xfZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aga-M6-vYH" userLabel="First Responder" sceneMemberID="firstResponder"/>

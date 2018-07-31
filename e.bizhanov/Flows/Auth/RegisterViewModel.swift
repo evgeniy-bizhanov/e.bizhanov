@@ -26,20 +26,20 @@ class RegisterViewModel {
     // MARK: - Functions
     
     func configure() {
-        var rules = [Signal<Any, NoError>]()
+        
         // логин не пустой
-        rules.append(
-            login.ignoreNil().map { $0 != "" }
-        )
+        let loginIsGood = login.ignoreNil().map { $0 != "" }
         
         // Пароль не пустой, больше 4 символов и равен паролю подтверждения
-        rules.append(
-            password.ignoreNil().map { $0.count >= 4 }
-        )
+        let passwordIsGood = password.ignoreNil().map { $0.count >= 4 }
+        let passwordIsConfirmed = combineLatest(password, confirmPassword).map { $0 == $1 }
         
-        rules.append(
-            combineLatest(password, confirmPassword).map { $0 == $1 }
-        )
+        combineLatest(
+            loginIsGood,
+            passwordIsGood,
+            passwordIsConfirmed)
+        .map { $0 && $1 && $2 }
+        .bind(to: isValid)
     }
     
     

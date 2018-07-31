@@ -21,7 +21,7 @@ final class LoginViewModel {
                 return
         }
         
-        service.login(userName: login, password: password) { response in
+        model.login(userName: login, password: password) { response in
             if let value = response.value {
                 // Сервис в который день уже не доступен, переписать на HTTP стабы пока
                 // времени не хватило
@@ -44,11 +44,11 @@ final class LoginViewModel {
     }
     
     // MARK: - Services
-    private var service: AuthRequestFactory
+    private var model: AuthRequestFactory
     
     // MARK: - Initializers
-    init(service: AuthRequestFactory) {
-        self.service = service
+    init(model: AuthRequestFactory) {
+        self.model = model
         
         setupModelValidationRules()
     }

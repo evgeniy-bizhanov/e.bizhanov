@@ -39,5 +39,7 @@ class RegisterViewController: UIScrollViewController {
         content.password.reactive.text ~ viewModel.password
         content.email.reactive.text ~ viewModel.email
         content.creditCard.reactive.text ~ viewModel.creditCard
+        
+        content.registerButton.reactive.isEnabled <~ viewModel.isValid
     }
 }

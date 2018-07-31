@@ -69,7 +69,11 @@ extension AppDelegate {
         }
         
         Container.shared.register(LoginViewModel.self) { resolver in
-            LoginViewModel(service: try resolver.resolve(service: AuthRequestFactory.self))
+            LoginViewModel(model: try resolver.resolve(service: AuthRequestFactory.self))
+        }
+        
+        Container.shared.register(RegisterViewModel.self) { resolver in
+            RegisterViewModel(model: try resolver.resolve(service: AuthRequestFactory.self))
         }
     }
 }

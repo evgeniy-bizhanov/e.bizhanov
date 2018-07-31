@@ -23,6 +23,7 @@ final class LoginViewController: UIScrollViewController {
     // MARK: - IBActions
     @IBAction func unwindToLogin(sender: UIStoryboardSegue) { }
     
+    
     // MARK: - Functions
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +39,11 @@ final class LoginViewController: UIScrollViewController {
         
         _ = contentView.loginButton.reactive.tap.observeNext { _ in
             viewModel.enter()
+        }
+        
+        _ = contentView.registerButton.reactive.tap.observeNext { [unowned self] _ in
+            self.performSegue(withIdentifier: "registerSegue", sender: nil)
+//            present(RegisterViewController, animated: true, completion: nil)
         }
     }
 }
