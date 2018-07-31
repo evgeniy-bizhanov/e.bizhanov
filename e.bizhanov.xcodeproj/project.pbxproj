@@ -68,6 +68,8 @@
 		7ACE699C20FC06A900290A25 /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACE699B20FC06A900290A25 /* Reviews.swift */; };
 		7AE2CD6E20EE0924003792D6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE2CD6D20EE0924003792D6 /* User.swift */; };
 		7AE4F3232100870F0047581B /* Basket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE4F3222100870F0047581B /* Basket.swift */; };
+		7AFC414221101B9800A42EB8 /* RegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AFC414121101B9800A42EB8 /* RegisterView.xib */; };
+		7AFC414421101D3E00A42EB8 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFC414321101D3E00A42EB8 /* RegisterView.swift */; };
 		AFCD319A7E7AA7D11E243995 /* Pods_e_bizhanov.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0275B7C3CD86EA722A4A944 /* Pods_e_bizhanov.framework */; };
 /* End PBXBuildFile section */
 
@@ -159,6 +161,8 @@
 		7ACE699B20FC06A900290A25 /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
 		7AE2CD6D20EE0924003792D6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7AE4F3222100870F0047581B /* Basket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basket.swift; sourceTree = "<group>"; };
+		7AFC414121101B9800A42EB8 /* RegisterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterView.xib; sourceTree = "<group>"; };
+		7AFC414321101D3E00A42EB8 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		7FEC1D693AC07A71C9A63721 /* Pods-e.bizhanovUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e.bizhanovUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-e.bizhanovUITests/Pods-e.bizhanovUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A7B2FC838CE82396D5363B46 /* Pods-e.bizhanovTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e.bizhanovTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-e.bizhanovTests/Pods-e.bizhanovTests.release.xcconfig"; sourceTree = "<group>"; };
 		C9D2158E3CCB0F3A25D7FFAB /* Pods-e.bizhanov.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e.bizhanov.release.xcconfig"; path = "Pods/Target Support Files/Pods-e.bizhanov/Pods-e.bizhanov.release.xcconfig"; sourceTree = "<group>"; };
@@ -426,6 +430,8 @@
 				7ACE412E2105FA3E001F7D5F /* LoginView.swift */,
 				7A0F290B210655780054E4A8 /* LoginViewModel.swift */,
 				7ACE412F2105FA3E001F7D5F /* LoginViewController.swift */,
+				7AFC414121101B9800A42EB8 /* RegisterView.xib */,
+				7AFC414321101D3E00A42EB8 /* RegisterView.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -572,6 +578,7 @@
 				7A79841A20FF8BA80031CFB4 /* getBasket.json.stub in Resources */,
 				7A2584C720E7E30B0030E644 /* Assets.xcassets in Resources */,
 				7ACE699420FC002700290A25 /* addReview.json.stub in Resources */,
+				7AFC414221101B9800A42EB8 /* RegisterView.xib in Resources */,
 				7A79841620FF8B7A0031CFB4 /* addToBasket.json.stub in Resources */,
 				7A79841820FF8B900031CFB4 /* deleteFromBasket.json.stub in Resources */,
 			);
@@ -717,6 +724,7 @@
 				7AE4F3232100870F0047581B /* Basket.swift in Sources */,
 				7ACE699C20FC06A900290A25 /* Reviews.swift in Sources */,
 				7AE2CD6E20EE0924003792D6 /* User.swift in Sources */,
+				7AFC414421101D3E00A42EB8 /* RegisterView.swift in Sources */,
 				7ACE699820FC02C900290A25 /* ReviewsRequestFactory.swift in Sources */,
 				7A463B4020F3F7D5003332FC /* FilterData.swift in Sources */,
 				7A463B3E20F3F7B8003332FC /* Products.swift in Sources */,

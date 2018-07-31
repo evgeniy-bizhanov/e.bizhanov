@@ -12,9 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginView" customModule="e_bizhanov" customModuleProvider="target">
             <connections>
+                <outlet property="login" destination="U6G-l4-U7k" id="HXW-iv-rJL"/>
                 <outlet property="loginButton" destination="BPg-rr-Hzy" id="zNN-eI-OXz"/>
-                <outlet property="loginField" destination="U6G-l4-U7k" id="HXW-iv-rJL"/>
-                <outlet property="passwordField" destination="nr8-kf-sb6" id="RYT-hu-g7F"/>
+                <outlet property="password" destination="nr8-kf-sb6" id="RYT-hu-g7F"/>
                 <outlet property="registerButton" destination="tUm-ME-CyG" id="2V6-lR-PPI"/>
             </connections>
         </placeholder>
@@ -24,7 +24,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tUm-ME-CyG">
-                    <rect key="frame" x="141.5" y="288" width="92" height="30"/>
+                    <rect key="frame" x="136.5" y="288" width="102" height="30"/>
                     <state key="normal" title="Регистрация"/>
                 </button>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tpM-nR-cTS">
@@ -48,8 +48,11 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BPg-rr-Hzy">
-                    <rect key="frame" x="141" y="382" width="92" height="30"/>
+                    <rect key="frame" x="136" y="382" width="102" height="30"/>
                     <color key="backgroundColor" red="0.99942404029999998" green="1" blue="0.8054199219" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="102" id="bhk-r0-nhr"/>
+                    </constraints>
                     <state key="normal" title="Войти"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -64,7 +67,6 @@
                 <constraint firstItem="BPg-rr-Hzy" firstAttribute="width" secondItem="tUm-ME-CyG" secondAttribute="width" id="IXx-27-P9M"/>
                 <constraint firstItem="BPg-rr-Hzy" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Ies-FE-Ftn"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="BPg-rr-Hzy" secondAttribute="bottom" constant="20" id="P3U-6G-uF2"/>
-                <constraint firstItem="tpM-nR-cTS" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="QEq-go-3iX"/>
                 <constraint firstItem="tUm-ME-CyG" firstAttribute="top" secondItem="tpM-nR-cTS" secondAttribute="bottom" constant="8" id="clw-Y1-Htk"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="tpM-nR-cTS" secondAttribute="trailing" constant="64" id="tp6-C7-4cT"/>
                 <constraint firstItem="tUm-ME-CyG" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="v8x-lt-0AP"/>

@@ -31,8 +31,8 @@ final class LoginViewController: UIScrollViewController {
             return
         }
         
-        contentView.loginField.reactive.text ~ viewModel.login
-        contentView.passwordField.reactive.text ~ viewModel.password
+        contentView.login.reactive.text ~ viewModel.login
+        contentView.password.reactive.text ~ viewModel.password
         
         contentView.loginButton.reactive.isEnabled <~ viewModel.isValid
         
