@@ -70,6 +70,7 @@
 		7AE4F3232100870F0047581B /* Basket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE4F3222100870F0047581B /* Basket.swift */; };
 		7AFC414221101B9800A42EB8 /* RegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AFC414121101B9800A42EB8 /* RegisterView.xib */; };
 		7AFC414421101D3E00A42EB8 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFC414321101D3E00A42EB8 /* RegisterView.swift */; };
+		7AFC4146211020E200A42EB8 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFC4145211020E200A42EB8 /* RegisterViewModel.swift */; };
 		AFCD319A7E7AA7D11E243995 /* Pods_e_bizhanov.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0275B7C3CD86EA722A4A944 /* Pods_e_bizhanov.framework */; };
 /* End PBXBuildFile section */
 
@@ -163,6 +164,7 @@
 		7AE4F3222100870F0047581B /* Basket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basket.swift; sourceTree = "<group>"; };
 		7AFC414121101B9800A42EB8 /* RegisterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterView.xib; sourceTree = "<group>"; };
 		7AFC414321101D3E00A42EB8 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		7AFC4145211020E200A42EB8 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		7FEC1D693AC07A71C9A63721 /* Pods-e.bizhanovUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e.bizhanovUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-e.bizhanovUITests/Pods-e.bizhanovUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A7B2FC838CE82396D5363B46 /* Pods-e.bizhanovTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e.bizhanovTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-e.bizhanovTests/Pods-e.bizhanovTests.release.xcconfig"; sourceTree = "<group>"; };
 		C9D2158E3CCB0F3A25D7FFAB /* Pods-e.bizhanov.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e.bizhanov.release.xcconfig"; path = "Pods/Target Support Files/Pods-e.bizhanov/Pods-e.bizhanov.release.xcconfig"; sourceTree = "<group>"; };
@@ -432,6 +434,7 @@
 				7ACE412F2105FA3E001F7D5F /* LoginViewController.swift */,
 				7AFC414121101B9800A42EB8 /* RegisterView.xib */,
 				7AFC414321101D3E00A42EB8 /* RegisterView.swift */,
+				7AFC4145211020E200A42EB8 /* RegisterViewModel.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -719,6 +722,7 @@
 				7A3BC90620EE1BAB0050CEC8 /* ResponseCodable.swift in Sources */,
 				7A3BC8FC20EE1ACE0050CEC8 /* AbstractErrorParser.swift in Sources */,
 				7A280DBC21100FCE0047105D /* IBExtensions.swift in Sources */,
+				7AFC4146211020E200A42EB8 /* RegisterViewModel.swift in Sources */,
 				7A79841D20FF957F0031CFB4 /* BasketRequestFactory.swift in Sources */,
 				7A0F290521064D0E0054E4A8 /* UIBaseViewController.swift in Sources */,
 				7AE4F3232100870F0047581B /* Basket.swift in Sources */,
