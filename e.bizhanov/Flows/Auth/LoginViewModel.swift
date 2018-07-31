@@ -15,17 +15,17 @@ final class LoginViewModel {
     let isValid = Observable<Bool>(false)
     
     // MARK: - Functions
-    func enter() {
+    func enter(completionHandler completion: @escaping () -> Void) {
         guard let login = login.value,
             let password = password.value else {
                 return
         }
         
-        model.login(userName: login, password: password) { response in
-            if let value = response.value {
-                // Сервис в который день уже не доступен, переписать на HTTP стабы пока
-                // времени не хватило
-                print(value)
+        service.login(userName: login, password: password) { response in
+            if let value = response.value,
+                value.result == 1 {
+                
+                completion()
             }
         }
     }
@@ -44,11 +44,11 @@ final class LoginViewModel {
     }
     
     // MARK: - Services
-    private var model: AuthRequestFactory
+    private var service: AuthRequestFactory
     
     // MARK: - Initializers
-    init(model: AuthRequestFactory) {
-        self.model = model
+    init(service: AuthRequestFactory) {
+        self.service = service
         
         setupModelValidationRules()
     }

@@ -10,22 +10,62 @@ enum Gender: String {
     case female = "f"
 }
 
-class RegisterViewModel {
+/// ViewModel для формы регистрации
+final class RegisterViewModel {
     
     // MARK: - Properties
     
+    /// Логин
     let login = Observable<String?>(nil)
+    
+    /// Пароль
     let password = Observable<String?>(nil)
+    
+    /// Подтверждение пароля
     let confirmPassword = Observable<String?>(nil)
+    
+    /// Эл. почта
     let email = Observable<String?>(nil)
+    
+    /// Кредитная карта
     let creditCard = Observable<String?>(nil)
+    
+    /// Пол
     let gender = Observable<Gender?>(nil)
+    
+    /// Модель валидна и готова к отправке на сервер
     let isValid = Observable<Bool>(false)
     
     
     // MARK: - Functions
     
-    func configure() {
+    /// Регистрирует пользователя с текущими параметрами модели
+    func register() {
+        
+        guard
+            let login = login.value,
+            let password = password.value,
+            let email = email.value else {
+                return
+        }
+        
+        let userData = UserData(
+            id: 0,
+            username: login,
+            password: password,
+            email: email,
+            gender: "",
+            creditCard: "",
+            bio: ""
+        )
+        
+        service.register(userData: userData) { result in
+            print(result.value)
+        }
+    }
+    
+    /// Настраивает правила, по которым проверяется модель на корректность
+    private func configureValidationRules() {
         
         // логин не пустой
         let loginIsGood = login.ignoreNil().map { $0 != "" }
@@ -45,14 +85,14 @@ class RegisterViewModel {
     
     // MARK: - Services
     
-    var model: AuthRequestFactory
+    private var service: AuthRequestFactory
     
     
     // MARK: - Initializers
     
-    init(model: AuthRequestFactory) {
-        self.model = model
+    init(service: AuthRequestFactory) {
+        self.service = service
         
-        configure()
+        configureValidationRules()
     }
 }

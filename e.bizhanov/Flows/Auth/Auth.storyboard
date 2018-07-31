@@ -46,8 +46,9 @@
                         <viewLayoutGuide key="safeArea" id="iv9-RE-riQ"/>
                     </view>
                     <connections>
-                        <outlet property="contentView" destination="PHd-Jn-csl" id="UX7-8h-kma"/>
-                        <segue destination="RFy-ie-Lb7" kind="show" identifier="registerSegue" id="9fu-6H-7uG"/>
+                        <outlet property="content" destination="PHd-Jn-csl" id="UX7-8h-kma"/>
+                        <segue destination="RFy-ie-Lb7" kind="show" identifier="registerSegue" id="HiZ-5p-3ei"/>
+                        <segue destination="gUB-iI-eDI" kind="show" identifier="productsSegue" id="HKp-wY-sJR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g06-X7-tkZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -92,12 +93,24 @@
                     </view>
                     <connections>
                         <outlet property="content" destination="46R-bG-Vn0" id="f4j-w4-hwN"/>
-                        <segue destination="Awt-px-DO5" kind="unwind" unwindAction="unwindToLoginWithSender:" id="doR-3u-xfZ"/>
+                        <segue destination="Awt-px-DO5" kind="unwind" identifier="unwindToLogin" unwindAction="unwindToLoginWithSender:" id="kmZ-Ao-yf8"/>
+                        <segue destination="gUB-iI-eDI" kind="show" identifier="productsSegue" id="xFB-cB-bR8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aga-M6-vYH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="846" y="33"/>
+            <point key="canvasLocation" x="845.60000000000002" y="32.833583208395808"/>
+        </scene>
+        <!--Products-->
+        <scene sceneID="Hcf-yz-Icz">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Products" id="gUB-iI-eDI" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BGD-OE-i5K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="441" y="490"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="HKp-wY-sJR"/>
+    </inferredMetricsTieBreakers>
 </document>

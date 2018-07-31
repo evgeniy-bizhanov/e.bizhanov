@@ -25,6 +25,9 @@
 		7A280DBC21100FCE0047105D /* IBExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A280DBB21100FCE0047105D /* IBExtensions.swift */; };
 		7A2DBFDD20F2B31800C1759D /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DBFDC20F2B31800C1759D /* AppConfig.swift */; };
 		7A2DBFDF20F2B3DC00C1759D /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DBFDE20F2B3DC00C1759D /* RequestManager.swift */; };
+		7A2F930F2110723D00921F61 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2F930E2110723D00921F61 /* Errors.swift */; };
+		7A2F9312211076BC00921F61 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2F9311211076BC00921F61 /* ProductsViewController.swift */; };
+		7A2F93142110777800921F61 /* Products.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A2F93132110777800921F61 /* Products.storyboard */; };
 		7A3BC8FC20EE1ACE0050CEC8 /* AbstractErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3BC8FB20EE1ACE0050CEC8 /* AbstractErrorParser.swift */; };
 		7A3BC8FE20EE1AFE0050CEC8 /* ErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3BC8FD20EE1AFE0050CEC8 /* ErrorParser.swift */; };
 		7A3BC90020EE1B250050CEC8 /* AuthRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3BC8FF20EE1B250050CEC8 /* AuthRequestFactory.swift */; };
@@ -120,6 +123,9 @@
 		7A280DBB21100FCE0047105D /* IBExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBExtensions.swift; sourceTree = "<group>"; };
 		7A2DBFDC20F2B31800C1759D /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		7A2DBFDE20F2B3DC00C1759D /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		7A2F930E2110723D00921F61 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		7A2F9311211076BC00921F61 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
+		7A2F93132110777800921F61 /* Products.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Products.storyboard; path = e.bizhanov/Flows/Products/Products.storyboard; sourceTree = SOURCE_ROOT; };
 		7A3BC8FB20EE1ACE0050CEC8 /* AbstractErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractErrorParser.swift; sourceTree = "<group>"; };
 		7A3BC8FD20EE1AFE0050CEC8 /* ErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorParser.swift; sourceTree = "<group>"; };
 		7A3BC8FF20EE1B250050CEC8 /* AuthRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequestFactory.swift; sourceTree = "<group>"; };
@@ -270,6 +276,15 @@
 			path = e.bizhanovUITests;
 			sourceTree = "<group>";
 		};
+		7A2F93102110769800921F61 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7A2F93132110777800921F61 /* Products.storyboard */,
+				7A2F9311211076BC00921F61 /* ProductsViewController.swift */,
+			);
+			path = Products;
+			sourceTree = "<group>";
+		};
 		7A3BC8F920EE1A9F0050CEC8 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -338,6 +353,7 @@
 		7A4B293F20E7FE160097B752 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				7A2F93102110769800921F61 /* Products */,
 				7ABF34692105F3BB0034A466 /* Auth */,
 			);
 			path = Flows;
@@ -353,6 +369,7 @@
 				7AFC062E210649AC0047FBE2 /* ViewController */,
 				7A7B3330210515D700FCCEC5 /* DI */,
 				7A3BC8F920EE1A9F0050CEC8 /* Network */,
+				7A2F930E2110723D00921F61 /* Errors.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -576,6 +593,7 @@
 				7A2584CA20E7E30B0030E644 /* LaunchScreen.storyboard in Resources */,
 				7ACE699620FC00DC00290A25 /* removeReview.json.stub in Resources */,
 				7ACE41302105FA3E001F7D5F /* LoginView.xib in Resources */,
+				7A2F93142110777800921F61 /* Products.storyboard in Resources */,
 				7A79841F210080560031CFB4 /* payBasket.json.stub in Resources */,
 				7ACE699220FBFD8400290A25 /* reviews.json.stub in Resources */,
 				7A463B4720F4999E003332FC /* catalogData.json.stub in Resources */,
@@ -735,6 +753,7 @@
 				7AFC414421101D3E00A42EB8 /* RegisterView.swift in Sources */,
 				7ACE699820FC02C900290A25 /* ReviewsRequestFactory.swift in Sources */,
 				7A463B4020F3F7D5003332FC /* FilterData.swift in Sources */,
+				7A2F9312211076BC00921F61 /* ProductsViewController.swift in Sources */,
 				7A463B3E20F3F7B8003332FC /* Products.swift in Sources */,
 				7A7B33322105160400FCCEC5 /* Container.swift in Sources */,
 				7AA270B621064B4100628A1E /* Extensions.swift in Sources */,
@@ -748,6 +767,7 @@
 				7A2DBFDD20F2B31800C1759D /* AppConfig.swift in Sources */,
 				7A463B4320F47F06003332FC /* CatalogRequestManager.swift in Sources */,
 				7A3BC8FE20EE1AFE0050CEC8 /* ErrorParser.swift in Sources */,
+				7A2F930F2110723D00921F61 /* Errors.swift in Sources */,
 				7A3BC90220EE1B430050CEC8 /* AuthRequestManager.swift in Sources */,
 				7ACE41312105FA3E001F7D5F /* LoginView.swift in Sources */,
 				7A19AD5F20EE2C820070EF3A /* RequestRouter.swift in Sources */,
