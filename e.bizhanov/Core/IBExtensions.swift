@@ -11,9 +11,4 @@ extension UIView {
         get { return layer.cornerRadius }
         set { layer.cornerRadius = newValue }
     }
-    
-    @IBInspectable var topPadding: CGFloat {
-        get { return layoutMargins.top }
-        set { layoutMargins.top = newValue }
-    }
 }
