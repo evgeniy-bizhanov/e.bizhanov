@@ -23,8 +23,9 @@ enum Result<T: ScopeResolver> {
 }
 
 // MARK: - Container
+@available(*, deprecated, message: "Переход на Swinject")
 /// Контейнер зависимостей
-final class Container: AbstractContainer {
+final class DIContainer: AbstractContainer {
 
     typealias Instance = Any
     
@@ -43,7 +44,7 @@ final class Container: AbstractContainer {
      - Parameter factory: Фабрика, с помощью которой разрешается зависимость
      */
     @discardableResult
-    func register(_ service: Any.Type, factory: @escaping Initializer) -> Result<Container> {
+    func register(_ service: Any.Type, factory: @escaping Initializer) -> Result<DIContainer> {
         let key = Key(service)
         let value: Factory = (factory, .default, nil)
 
@@ -56,18 +57,18 @@ final class Container: AbstractContainer {
     // наверное надо инстанцировать в начале запуска, что бы не было соблазна
     // использовать еще где то в коде
     private init() {}
-    public static let shared = Container() as AbstractContainer & Resolver
+    public static let shared = DIContainer() as AbstractContainer & Resolver
 }
 
 // MARK: - ScopeResolver
-extension Container: ScopeResolver {
+extension DIContainer: ScopeResolver {
     func inScope(_ scope: Scope, key: Key) {
         dictionary[key]?.scope = scope
     }
 }
 
 // MARK: - Resolver
-extension Container: Resolver {
+extension DIContainer: Resolver {
     
     func resolve<T>(service: T.Type) throws -> T {
         let key = Key(service)

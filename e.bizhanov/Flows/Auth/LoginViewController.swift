@@ -12,7 +12,7 @@ final class LoginViewController: UIScrollViewController {
     
     // MARK: - Models
     var viewModel: LoginViewModel? {
-        return try? Container.shared.resolve(service: LoginViewModel.self)
+        return try? DIContainer.shared.resolve(service: LoginViewModel.self)
     }
     
     // MARK: - Properties
