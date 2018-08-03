@@ -25,6 +25,7 @@
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tUm-ME-CyG">
                     <rect key="frame" x="136.5" y="288" width="102" height="30"/>
+                    <accessibility key="accessibilityConfiguration" identifier="register"/>
                     <state key="normal" title="Регистрация"/>
                 </button>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tpM-nR-cTS">
@@ -33,6 +34,7 @@
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Имя пользователя" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="U6G-l4-U7k">
                             <rect key="frame" x="0.0" y="0.0" width="247" height="30"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <accessibility key="accessibilityConfiguration" identifier="login"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="username"/>
@@ -40,6 +42,7 @@
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nr8-kf-sb6">
                             <rect key="frame" x="0.0" y="38" width="247" height="30"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <accessibility key="accessibilityConfiguration" identifier="password"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
@@ -50,6 +53,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BPg-rr-Hzy">
                     <rect key="frame" x="136" y="382" width="102" height="30"/>
                     <color key="backgroundColor" red="0.99942404029999998" green="1" blue="0.8054199219" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <accessibility key="accessibilityConfiguration" identifier="enter"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="102" id="bhk-r0-nhr"/>
                     </constraints>
@@ -60,14 +64,23 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добро пожаловать" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTN-lh-087">
+                    <rect key="frame" x="111.5" y="64" width="151.5" height="20.5"/>
+                    <accessibility key="accessibilityConfiguration" identifier="header"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="0.73077624200000002" green="1" blue="0.75896146440000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
                 <constraint firstItem="BPg-rr-Hzy" firstAttribute="top" secondItem="tUm-ME-CyG" secondAttribute="bottom" constant="64" id="9DV-K7-xb4"/>
+                <constraint firstItem="xTN-lh-087" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="64" id="HF4-C9-cLE"/>
                 <constraint firstItem="BPg-rr-Hzy" firstAttribute="width" secondItem="tUm-ME-CyG" secondAttribute="width" id="IXx-27-P9M"/>
                 <constraint firstItem="BPg-rr-Hzy" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Ies-FE-Ftn"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="BPg-rr-Hzy" secondAttribute="bottom" constant="20" id="P3U-6G-uF2"/>
                 <constraint firstItem="tUm-ME-CyG" firstAttribute="top" secondItem="tpM-nR-cTS" secondAttribute="bottom" constant="8" id="clw-Y1-Htk"/>
+                <constraint firstItem="xTN-lh-087" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="eyd-I4-gGz"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="tpM-nR-cTS" secondAttribute="trailing" constant="64" id="tp6-C7-4cT"/>
                 <constraint firstItem="tUm-ME-CyG" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="v8x-lt-0AP"/>
                 <constraint firstItem="tpM-nR-cTS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="64" id="wGQ-ma-0MQ"/>

@@ -21,7 +21,7 @@
 		7A2584C020E7E3080030E644 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2584BF20E7E3080030E644 /* AppDelegate.swift */; };
 		7A2584C720E7E30B0030E644 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A2584C620E7E30B0030E644 /* Assets.xcassets */; };
 		7A2584CA20E7E30B0030E644 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A2584C820E7E30B0030E644 /* LaunchScreen.storyboard */; };
-		7A2584E020E7E30C0030E644 /* e_bizhanovUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2584DF20E7E30C0030E644 /* e_bizhanovUITests.swift */; };
+		7A2584E020E7E30C0030E644 /* AuthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2584DF20E7E30C0030E644 /* AuthUITests.swift */; };
 		7A280DBC21100FCE0047105D /* IBExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A280DBB21100FCE0047105D /* IBExtensions.swift */; };
 		7A2DBFDD20F2B31800C1759D /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DBFDC20F2B31800C1759D /* AppConfig.swift */; };
 		7A2DBFDF20F2B3DC00C1759D /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DBFDE20F2B3DC00C1759D /* RequestManager.swift */; };
@@ -118,7 +118,7 @@
 		7A2584D020E7E30B0030E644 /* e.bizhanovTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = e.bizhanovTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A2584D620E7E30B0030E644 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A2584DB20E7E30C0030E644 /* e.bizhanovUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = e.bizhanovUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7A2584DF20E7E30C0030E644 /* e_bizhanovUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = e_bizhanovUITests.swift; sourceTree = "<group>"; };
+		7A2584DF20E7E30C0030E644 /* AuthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUITests.swift; sourceTree = "<group>"; };
 		7A2584E120E7E30C0030E644 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A280DBB21100FCE0047105D /* IBExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBExtensions.swift; sourceTree = "<group>"; };
 		7A2DBFDC20F2B31800C1759D /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
@@ -270,7 +270,7 @@
 		7A2584DE20E7E30C0030E644 /* e.bizhanovUITests */ = {
 			isa = PBXGroup;
 			children = (
-				7A2584DF20E7E30C0030E644 /* e_bizhanovUITests.swift */,
+				7A2584DF20E7E30C0030E644 /* AuthUITests.swift */,
 				7A2584E120E7E30C0030E644 /* Info.plist */,
 			);
 			path = e.bizhanovUITests;
@@ -791,7 +791,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A2584E020E7E30C0030E644 /* e_bizhanovUITests.swift in Sources */,
+				7A2584E020E7E30C0030E644 /* AuthUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

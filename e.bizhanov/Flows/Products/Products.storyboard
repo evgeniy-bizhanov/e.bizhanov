@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6s6-7e-8pH">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Каталог-->
         <scene sceneID="JiI-2v-Nm9">
             <objects>
                 <tableViewController id="p9c-DC-GAa" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Kgx-1v-ecW">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
@@ -28,7 +32,7 @@
                             <outlet property="delegate" destination="p9c-DC-GAa" id="Y6a-I4-g90"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="cZu-yJ-Yyd"/>
+                    <navigationItem key="navigationItem" title="Каталог" id="cZu-yJ-Yyd"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hy6-9T-6jB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
