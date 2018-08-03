@@ -37,42 +37,42 @@ extension AppDelegate {
         }
         
         // MARK: - Prepare dependencies
-        Container.shared.register(DispatchQueue.self) { _ in
+        DIContainer.shared.register(DispatchQueue.self) { _ in
             DispatchQueue.global(qos: .utility)
         }
         
-        Container.shared
+        DIContainer.shared
             .register(SessionManager.self) { _ in
                 prepareSessionManager()
             }.inScope(.singleton)
         
-        Container.shared.register(​AbstractErrorParser​.self) { _ in
+        DIContainer.shared.register(​AbstractErrorParser​.self) { _ in
             ErrorParser()
         }
         
         // MARK: - Factories
-        Container.shared.register(CatalogRequestFactory.self) { resolver in
+        DIContainer.shared.register(CatalogRequestFactory.self) { resolver in
             makeFactory(CatalogRequestManager.self, resolver: resolver)
         }
         
-        Container.shared.register(ReviewsRequestFactory.self) { resolver in
+        DIContainer.shared.register(ReviewsRequestFactory.self) { resolver in
             makeFactory(ReviewsRequestManager.self, resolver: resolver)
         }
         
-        Container.shared.register(BasketRequestFactory.self) { resolver in
+        DIContainer.shared.register(BasketRequestFactory.self) { resolver in
             makeFactory(BasketRequestManager.self, resolver: resolver)
         }
         
         // MARK: - Auth
-        Container.shared.register(AuthRequestFactory.self) { resolver in
+        DIContainer.shared.register(AuthRequestFactory.self) { resolver in
             makeFactory(AuthRequestManager.self, resolver: resolver)
         }
         
-        Container.shared.register(LoginViewModel.self) { resolver in
+        DIContainer.shared.register(LoginViewModel.self) { resolver in
             LoginViewModel(service: try resolver.resolve(service: AuthRequestFactory.self))
         }
         
-        Container.shared.register(RegisterViewModel.self) { resolver in
+        DIContainer.shared.register(RegisterViewModel.self) { resolver in
             RegisterViewModel(service: try resolver.resolve(service: AuthRequestFactory.self))
         }
     }

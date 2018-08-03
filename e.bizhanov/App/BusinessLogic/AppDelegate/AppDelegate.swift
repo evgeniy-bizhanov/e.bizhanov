@@ -1,3 +1,4 @@
+import Swinject
 import UIKit
 
 @UIApplicationMain
@@ -10,6 +11,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         setupDIContainer()
+        
+//        let container = Container()
         
         return true
     }
