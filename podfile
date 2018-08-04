@@ -7,10 +7,20 @@ target 'e.bizhanov' do
 
   # Pods for e.bizhanov
   pod 'SwiftLint', '~> 0.25'
+  
+  # Networking
   pod 'Alamofire', '~> 4.7'
   pod 'OHHTTPStubs/Swift', '~> 6.1.0'
+  
+  # Bindings
   pod 'Bond'
+
+  # DI
   pod 'Swinject', '~> 2.4'
+ 
+  # Analytics
+  pod 'Fabric'
+  pod 'Crashlytics'
 
   target 'e.bizhanovTests' do
     inherit! :search_paths
