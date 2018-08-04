@@ -1,3 +1,5 @@
+import Crashlytics
+import Fabric
 import Swinject
 import UIKit
 
@@ -12,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         setupDIContainer()
         
-//        let container = Container()
+        Fabric.with([Crashlytics.self])
         
         return true
     }

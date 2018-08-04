@@ -21,7 +21,7 @@ PODS:
   - OHHTTPStubs/Swift (6.1.0):
     - OHHTTPStubs/Default
   - ReactiveKit (3.9.6)
-  - SwiftLint (0.26.0)
+  - SwiftLint (0.27.0)
   - Swinject (2.4.1)
 
 DEPENDENCIES:
@@ -53,7 +53,7 @@ SPEC CHECKSUMS:
   Fabric: a2917d3895e4c1569b9c3170de7320ea1b1e6661
   OHHTTPStubs: 1e21c7d2c084b8153fc53d48400d8919d2d432d0
   ReactiveKit: 804d3093ad42dee0de19e42d4f7dcae9c14364b0
-  SwiftLint: f6b83e8d95ee1e91e11932d843af4fdcbf3fc764
+  SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
   Swinject: f7f15a9672e99328c1f07f277091087917215700
 
 PODFILE CHECKSUM: af3417b80cfb9ed488996467fcfdb80ae39d1d69
