@@ -17,6 +17,7 @@
 		7A17676F20EF305D00D38134 /* ProfileRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A17676E20EF305D00D38134 /* ProfileRequestFactory.swift */; };
 		7A17677120EF34AC00D38134 /* ProfileRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A17677020EF34AC00D38134 /* ProfileRequestManager.swift */; };
 		7A17677320EF353A00D38134 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A17677220EF353A00D38134 /* UserData.swift */; };
+		7A178D8A2116264900446832 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A178D892116264900446832 /* Analytics.swift */; };
 		7A19AD5F20EE2C820070EF3A /* RequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A19AD5E20EE2C820070EF3A /* RequestRouter.swift */; };
 		7A2584C020E7E3080030E644 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2584BF20E7E3080030E644 /* AppDelegate.swift */; };
 		7A2584C720E7E30B0030E644 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A2584C620E7E30B0030E644 /* Assets.xcassets */; };
@@ -109,6 +110,7 @@
 		7A17676E20EF305D00D38134 /* ProfileRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRequestFactory.swift; sourceTree = "<group>"; };
 		7A17677020EF34AC00D38134 /* ProfileRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRequestManager.swift; sourceTree = "<group>"; };
 		7A17677220EF353A00D38134 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		7A178D892116264900446832 /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
 		7A19AD5E20EE2C820070EF3A /* RequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRouter.swift; sourceTree = "<group>"; };
 		7A2584BC20E7E3080030E644 /* e.bizhanov.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = e.bizhanov.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A2584BF20E7E3080030E644 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -362,6 +364,7 @@
 		7A4B294020E7FE270097B752 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				7A178D892116264900446832 /* Analytics.swift */,
 				7A0F290621064FE40054E4A8 /* ReactiveOperators.swift */,
 				7AA270B521064B4100628A1E /* Extensions.swift */,
 				7A280DBB21100FCE0047105D /* IBExtensions.swift */,
@@ -751,6 +754,7 @@
 				7A7B33382105CE2F00FCCEC5 /* ScopeResolver.swift in Sources */,
 				7A0F290721064FE50054E4A8 /* ReactiveOperators.swift in Sources */,
 				7A74BB3221008BA3005840A9 /* BasketRequestManager.swift in Sources */,
+				7A178D8A2116264900446832 /* Analytics.swift in Sources */,
 				7A463B3C20F3F6DD003332FC /* CatalogRequestFactory.swift in Sources */,
 				7AFC41482110261A00A42EB8 /* RegisterViewController.swift in Sources */,
 				7A0F290C210655780054E4A8 /* LoginViewModel.swift in Sources */,
