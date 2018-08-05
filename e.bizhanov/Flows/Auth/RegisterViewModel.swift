@@ -11,7 +11,7 @@ enum Gender: String {
 }
 
 /// ViewModel для формы регистрации
-final class RegisterViewModel {
+final class RegisterViewModel: Trackable {
     
     // MARK: - Properties
     
@@ -59,8 +59,13 @@ final class RegisterViewModel {
             bio: ""
         )
         
-        service.register(userData: userData) { result in
-            print(result.value)
+        service.register(userData: userData) { [weak self] response in
+            guard let `self` = self else {
+                return
+            }
+            
+            let success = response.value?.result == 1
+            self.track(.signup(method: .password, success: success))
         }
     }
     

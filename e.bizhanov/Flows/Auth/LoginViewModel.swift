@@ -6,7 +6,7 @@ import Bond
 import ReactiveKit
 
 /// Модель представления для формы входа в магазин
-final class LoginViewModel {
+final class LoginViewModel: Trackable {
     // MARK: - Properties
     let login = Observable<String?>(nil)
     let password = Observable<String?>(nil)
@@ -21,12 +21,19 @@ final class LoginViewModel {
                 return
         }
         
-        service.login(userName: login, password: password) { response in
+        service.login(userName: login, password: password) { [weak self] response in
+            guard let `self` = self else {
+                return
+            }
+            
             if let value = response.value,
                 value.result == 1 {
                 
                 completion()
             }
+            
+            let success = response.value?.result == 1
+            self.track(.login(method: .password, success: success))
         }
     }
     
