@@ -964,6 +964,7 @@
 				DEVELOPMENT_TEAM = 6TZ3MZ977X;
 				INFOPLIST_FILE = e.bizhanov/Environments/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DDEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bizhanov.e-bizhanov";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -980,6 +981,7 @@
 				DEVELOPMENT_TEAM = 6TZ3MZ977X;
 				INFOPLIST_FILE = e.bizhanov/Environments/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DRELEASE";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bizhanov.e-bizhanov";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

@@ -46,6 +46,10 @@ final class RegisterViewModel: Trackable {
             let login = login.value,
             let password = password.value,
             let email = email.value else {
+                assertionFailure("Поля формы не должны быть пустыми")
+                
+                // TODO: Вернуть ошибку и показать сообщение пользователю
+                
                 return
         }
         

@@ -29,6 +29,7 @@ final class LoginViewController: UIScrollViewController {
         super.viewDidLoad()
         
         guard let viewModel = viewModel else {
+            assertionFailure("Модель представления не может быть nil")
             return
         }
         

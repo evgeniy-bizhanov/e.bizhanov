@@ -21,23 +21,21 @@ enum AnalyticsEvent {
     case signup(method: SignupMethod, success: Bool)
     case login(method: LoginMethod, success: Bool)
     case logout
-    case addToCart(id: Int, arguments: [String: Any]?)
-    case purchase(id: Int, arguments: [String: Any]?)
-//    case addToCart(
-//        price: Decimal,
-//        currency: String,
-//        name: String,
-//        type: String,
-//        id: String
-//    )
-//    case purchase(
-//        price: Decimal,
-//        currency: String,
-//        success: Bool,
-//        name: String,
-//        type: String,
-//        id: String
-//    )
+    case addToCart(
+        price: Decimal,
+        currency: String,
+        name: String,
+        type: String,
+        id: String
+    )
+    case purchase(
+        price: Decimal,
+        currency: String,
+        success: Bool,
+        name: String,
+        type: String,
+        id: String
+    )
     case custom(name: String, attributes: [String: Any]?)
 }
 
@@ -63,43 +61,62 @@ extension Trackable {
         case .logout:
             Answers.logCustomEvent(withName: "default", customAttributes: nil)
             
-        case let .addToCart(id, arguments):
-            var arguments = arguments ?? [:]
-            arguments["id"] = id
-            Answers.logCustomEvent(withName: "Add to Cart", customAttributes: arguments)
-            
-        case let .purchase(id, arguments):
-            var arguments = arguments ?? [:]
-            arguments["id"] = id
-            Answers.logCustomEvent(withName: "Purchase", customAttributes: arguments)
-            
-//        case let .addToCart(price, currency, name, type, id):
-//            let price = NSDecimalNumber(decimal: price)
-//            Answers.logAddToCart(
-//                withPrice: price,
-//                currency: currency,
-//                itemName: name,
-//                itemType: type,
-//                itemId: id,
-//                customAttributes: nil
-//            )
-//
-//        case let .purchase(price, currency, success, name, type, id):
-//            let price = NSDecimalNumber(decimal: price)
-//            let success = NSNumber(value: success)
-//            Answers.logPurchase(
-//                withPrice: price,
-//                currency: currency,
-//                success: success,
-//                itemName: name,
-//                itemType: type,
-//                itemId: id,
-//                customAttributes: nil
-//            )
+        case let .addToCart(price, currency, name, type, id):
+            let price = NSDecimalNumber(decimal: price)
+            Answers.logAddToCart(
+                withPrice: price,
+                currency: currency,
+                itemName: name,
+                itemType: type,
+                itemId: id,
+                customAttributes: nil
+            )
+
+        case let .purchase(price, currency, success, name, type, id):
+            let price = NSDecimalNumber(decimal: price)
+            let success = NSNumber(value: success)
+            Answers.logPurchase(
+                withPrice: price,
+                currency: currency,
+                success: success,
+                itemName: name,
+                itemType: type,
+                itemId: id,
+                customAttributes: nil
+            )
             
         case let .custom(name, attributes):
             Answers.logCustomEvent(withName: name, customAttributes: attributes)
         }
         
     }
+}
+
+// MARK: - Assertion failure
+/**
+ Указывает в каком файле и в какой строке произошла ошибка
+ 
+ - Attention: Переопределенный метод.
+ 
+ - Parameters:
+   - message: Сообщение об ошибке
+   - file: Файл в котором произошла ошибка
+   - line: Строка которая вызвала исключение
+ */
+func assertionFailure(
+    _ message: String,
+    file: StaticString = #file,
+    line: UInt = #line) {
+    
+    #if DEBUG
+        Swift.assertionFailure(message, file: file, line: line)
+    #else
+        Answers.logCustomEvent(
+            withName: "assertionFailure",
+            customAttributes: [
+                "message": message,
+                "file": file,
+                "line": line
+            ])
+    #endif
 }
