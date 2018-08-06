@@ -1,6 +1,5 @@
 import Crashlytics
 import Fabric
-import Swinject
 import UIKit
 
 @UIApplicationMain
@@ -11,8 +10,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-        setupDIContainer()
         
         Fabric.with([Crashlytics.self])
         

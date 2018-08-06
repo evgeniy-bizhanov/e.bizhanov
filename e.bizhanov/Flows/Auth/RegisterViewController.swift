@@ -14,7 +14,7 @@ final class RegisterViewController: UIScrollViewController {
     
     // Позже переделаю, я вроде бы понял как примерно должно быть,
     // пока не успеваю сделать
-    lazy var viewModel: RegisterViewModel? = try? DIContainer.shared.resolve(service: RegisterViewModel.self)
+    var viewModel: RegisterViewModel?
     
     
     // MARK: - Properties

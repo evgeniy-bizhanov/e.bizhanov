@@ -17,6 +17,8 @@ extension XCTestCase {
     /// Подготавливает контейнер зависимостей
     func setupDIContainer() {
         
+        
+        
         // MARK: - Functions
         func makeFactory<T: AbstractRequestManager>(_ service: T.Type, resolver: Resolver) -> T {
             

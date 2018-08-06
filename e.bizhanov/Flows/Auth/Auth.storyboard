@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Login View Controller-->
+        <!--Vc-->
         <scene sceneID="XCt-ck-0sP">
             <objects>
                 <viewController id="VVA-nZ-g9J" customClass="LoginViewController" customModule="e_bizhanov" customModuleProvider="target" sceneMemberID="viewController">
@@ -52,11 +52,16 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g06-X7-tkZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="dDg-GV-Ghe" customClass="LoginBuilder" customModule="e_bizhanov" customModuleProvider="target">
+                    <connections>
+                        <outlet property="vc" destination="VVA-nZ-g9J" id="azs-nz-yuw"/>
+                    </connections>
+                </customObject>
                 <exit id="Awt-px-DO5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="28" y="33"/>
         </scene>
-        <!--Register View Controller-->
+        <!--Vc-->
         <scene sceneID="dYG-GF-4cm">
             <objects>
                 <viewController id="RFy-ie-Lb7" customClass="RegisterViewController" customModule="e_bizhanov" customModuleProvider="target" sceneMemberID="viewController">
@@ -98,6 +103,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aga-M6-vYH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="lRW-qL-RlN" customClass="RegisterBuilder" customModule="e_bizhanov" customModuleProvider="target">
+                    <connections>
+                        <outlet property="vc" destination="RFy-ie-Lb7" id="AAB-H0-Wcf"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="845.60000000000002" y="32.833583208395808"/>
         </scene>
@@ -111,6 +121,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="HKp-wY-sJR"/>
+        <segue reference="xFB-cB-bR8"/>
     </inferredMetricsTieBreakers>
 </document>
