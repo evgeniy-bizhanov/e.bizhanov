@@ -3,6 +3,8 @@
 //
 
 import Swinject
+import XCTest
+@testable import e_bizhanov
 
 // Необязательно делать замыкание,
 // т.к. переменная уже по факту является ленивой (объявлена глобально)
@@ -18,12 +20,8 @@ private let assembler: Assembler = Assembler(
     ]
 )
 
-class AbstractModuleBuilder: NSObject {
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        self.resolve(resolver: assembler.resolver)
+extension XCTestCase {
+    var resolver: Resolver {
+       return assembler.resolver
     }
-    
-    func resolve(resolver: Resolver) {}
 }

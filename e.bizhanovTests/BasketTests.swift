@@ -13,7 +13,7 @@ class BasketTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        request = try! Container.shared.resolve(service: BasketRequestFactory.self)
+        request = resolver.resolve(BasketRequestFactory.self)
     }
     
     override func tearDown() {

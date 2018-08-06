@@ -8,7 +8,7 @@ class CatalogTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        request = try! Container.shared.resolve(service: CatalogRequestFactory.self)
+        request = resolver.resolve(CatalogRequestFactory.self)
     }
     
     override func tearDown() {

@@ -39,7 +39,6 @@
 		7A3BC90220EE1B430050CEC8 /* AuthRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3BC90120EE1B430050CEC8 /* AuthRequestManager.swift */; };
 		7A3BC90420EE1B800050CEC8 /* AbstractRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3BC90320EE1B800050CEC8 /* AbstractRequestManager.swift */; };
 		7A3BC90620EE1BAB0050CEC8 /* ResponseCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3BC90520EE1BAB0050CEC8 /* ResponseCodable.swift */; };
-		7A463B3720F3F0EE003332FC /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A463B3620F3F0EE003332FC /* DIContainer.swift */; };
 		7A463B3920F3F166003332FC /* ErrorParserStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A463B3820F3F166003332FC /* ErrorParserStub.swift */; };
 		7A463B3C20F3F6DD003332FC /* CatalogRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A463B3B20F3F6DD003332FC /* CatalogRequestFactory.swift */; };
 		7A463B3E20F3F7B8003332FC /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A463B3D20F3F7B8003332FC /* Products.swift */; };
@@ -62,7 +61,7 @@
 		7ACAF79121177E1000DFA4CB /* AuthServiceAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAF79021177E1000DFA4CB /* AuthServiceAssembler.swift */; };
 		7ACAF7932118098900DFA4CB /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAF7922118098900DFA4CB /* Injection.swift */; };
 		7ACAF79621180E4C00DFA4CB /* ServiceAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAF79521180E4C00DFA4CB /* ServiceAssembler.swift */; };
-		7ACAF798211815F100DFA4CB /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAF797211815F100DFA4CB /* Assembler.swift */; };
+		7ACAF798211815F100DFA4CB /* Injector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAF797211815F100DFA4CB /* Injector.swift */; };
 		7ACE41302105FA3E001F7D5F /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ACE412D2105FA3D001F7D5F /* LoginView.xib */; };
 		7ACE41312105FA3E001F7D5F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACE412E2105FA3E001F7D5F /* LoginView.swift */; };
 		7ACE41322105FA3E001F7D5F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACE412F2105FA3E001F7D5F /* LoginViewController.swift */; };
@@ -75,6 +74,7 @@
 		7ACE699C20FC06A900290A25 /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACE699B20FC06A900290A25 /* Reviews.swift */; };
 		7AE2CD6E20EE0924003792D6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE2CD6D20EE0924003792D6 /* User.swift */; };
 		7AE4F3232100870F0047581B /* Basket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE4F3222100870F0047581B /* Basket.swift */; };
+		7AEA3CC0211879360054D713 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AEA3CBF211879360054D713 /* Injection.swift */; };
 		7AFC414221101B9800A42EB8 /* RegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AFC414121101B9800A42EB8 /* RegisterView.xib */; };
 		7AFC414421101D3E00A42EB8 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFC414321101D3E00A42EB8 /* RegisterView.swift */; };
 		7AFC4146211020E200A42EB8 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFC4145211020E200A42EB8 /* RegisterViewModel.swift */; };
@@ -141,7 +141,6 @@
 		7A3BC90120EE1B430050CEC8 /* AuthRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequestManager.swift; sourceTree = "<group>"; };
 		7A3BC90320EE1B800050CEC8 /* AbstractRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractRequestManager.swift; sourceTree = "<group>"; };
 		7A3BC90520EE1BAB0050CEC8 /* ResponseCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCodable.swift; sourceTree = "<group>"; };
-		7A463B3620F3F0EE003332FC /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		7A463B3820F3F166003332FC /* ErrorParserStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorParserStub.swift; sourceTree = "<group>"; };
 		7A463B3B20F3F6DD003332FC /* CatalogRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogRequestFactory.swift; sourceTree = "<group>"; };
 		7A463B3D20F3F7B8003332FC /* Products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Products.swift; sourceTree = "<group>"; };
@@ -164,7 +163,7 @@
 		7ACAF79021177E1000DFA4CB /* AuthServiceAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceAssembler.swift; sourceTree = "<group>"; };
 		7ACAF7922118098900DFA4CB /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
 		7ACAF79521180E4C00DFA4CB /* ServiceAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAssembler.swift; sourceTree = "<group>"; };
-		7ACAF797211815F100DFA4CB /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
+		7ACAF797211815F100DFA4CB /* Injector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injector.swift; sourceTree = "<group>"; };
 		7ACE412D2105FA3D001F7D5F /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
 		7ACE412E2105FA3E001F7D5F /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		7ACE412F2105FA3E001F7D5F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -177,6 +176,7 @@
 		7ACE699B20FC06A900290A25 /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
 		7AE2CD6D20EE0924003792D6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7AE4F3222100870F0047581B /* Basket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basket.swift; sourceTree = "<group>"; };
+		7AEA3CBF211879360054D713 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
 		7AFC414121101B9800A42EB8 /* RegisterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterView.xib; sourceTree = "<group>"; };
 		7AFC414321101D3E00A42EB8 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		7AFC4145211020E200A42EB8 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
@@ -265,6 +265,7 @@
 		7A2584D320E7E30B0030E644 /* e.bizhanovTests */ = {
 			isa = PBXGroup;
 			children = (
+				7AEA3CBF211879360054D713 /* Injection.swift */,
 				7A463B4820F4A001003332FC /* Helpers */,
 				7A463B3820F3F166003332FC /* ErrorParserStub.swift */,
 				7A2584D620E7E30B0030E644 /* Info.plist */,
@@ -343,7 +344,6 @@
 			isa = PBXGroup;
 			children = (
 				7A463B4920F4A01B003332FC /* HttpStubHelper.swift */,
-				7A463B3620F3F0EE003332FC /* DIContainer.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -404,7 +404,7 @@
 		7A4B294320E7FE8F0097B752 /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
-				7ACAF797211815F100DFA4CB /* Assembler.swift */,
+				7ACAF797211815F100DFA4CB /* Injector.swift */,
 				7ACAF79421180E1C00DFA4CB /* Service */,
 			);
 			path = Assembly;
@@ -779,7 +779,7 @@
 				7A79841D20FF957F0031CFB4 /* BasketRequestFactory.swift in Sources */,
 				7A0F290521064D0E0054E4A8 /* UIBaseViewController.swift in Sources */,
 				7AE4F3232100870F0047581B /* Basket.swift in Sources */,
-				7ACAF798211815F100DFA4CB /* Assembler.swift in Sources */,
+				7ACAF798211815F100DFA4CB /* Injector.swift in Sources */,
 				7ACE699C20FC06A900290A25 /* Reviews.swift in Sources */,
 				7AE2CD6E20EE0924003792D6 /* User.swift in Sources */,
 				7AFC414421101D3E00A42EB8 /* RegisterView.swift in Sources */,
@@ -810,10 +810,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AEA3CC0211879360054D713 /* Injection.swift in Sources */,
 				7A463B3920F3F166003332FC /* ErrorParserStub.swift in Sources */,
 				7A79841420FF885E0031CFB4 /* BasketTests.swift in Sources */,
 				7A463B4A20F4A01B003332FC /* HttpStubHelper.swift in Sources */,
-				7A463B3720F3F0EE003332FC /* DIContainer.swift in Sources */,
 				7A15C51320F37ADA00861852 /* CatalogTests.swift in Sources */,
 				7ACE699020FBF88F00290A25 /* ReviewTests.swift in Sources */,
 			);
