@@ -11,9 +11,7 @@ final class LoginViewController: UIScrollViewController {
     @IBOutlet weak var content: LoginView!
     
     // MARK: - Models
-    var viewModel: LoginViewModel? {
-        return try? DIContainer.shared.resolve(service: LoginViewModel.self)
-    }
+    var viewModel: LoginViewModel?
     
     // MARK: - Properties
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
@@ -29,6 +27,7 @@ final class LoginViewController: UIScrollViewController {
         super.viewDidLoad()
         
         guard let viewModel = viewModel else {
+            assertionFailure("Модель представления не может быть nil")
             return
         }
         

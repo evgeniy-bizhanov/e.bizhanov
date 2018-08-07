@@ -14,7 +14,7 @@ final class RegisterViewController: UIScrollViewController {
     
     // Позже переделаю, я вроде бы понял как примерно должно быть,
     // пока не успеваю сделать
-    lazy var viewModel: RegisterViewModel! = try? DIContainer.shared.resolve(service: RegisterViewModel.self)
+    var viewModel: RegisterViewModel?
     
     
     // MARK: - Properties
@@ -29,6 +29,11 @@ final class RegisterViewController: UIScrollViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        guard let viewModel = viewModel else {
+            assertionFailure("Модель представления не может быть nil")
+            return
+        }
+        
         content.login.reactive.text ~ viewModel.login
         content.password.reactive.text ~ viewModel.password
         content.confirmPassword.reactive.text ~ viewModel.confirmPassword
@@ -36,8 +41,8 @@ final class RegisterViewController: UIScrollViewController {
         content.creditCard.reactive.text ~ viewModel.creditCard
         
         content.registerButton.reactive.isEnabled <~ viewModel.isValid
-        _ = content.registerButton.reactive.tap.observeNext { [unowned self] in
-            self.viewModel.register()
+        _ = content.registerButton.reactive.tap.observeNext {
+            viewModel.register()
         }
         
         _ = content.loginButton.reactive.tap.observeNext { [unowned self] in

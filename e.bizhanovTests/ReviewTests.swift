@@ -11,7 +11,7 @@ class ReviewTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        request = try! Container.shared.resolve(service: ReviewsRequestFactory.self)
+        request = resolver.resolve(ReviewsRequestFactory.self)
     }
     
     override func tearDown() {
