@@ -13,6 +13,7 @@ class AuthUITests: XCTestCase {
         
         continueAfterFailure = false
         app = XCUIApplication()
+        setupSnapshot(app)
         app.launch()
     }
     
@@ -28,6 +29,7 @@ class AuthUITests: XCTestCase {
         
         let controller = app.navigationBars["Каталог"]
         XCTAssertNotNil(controller)
+        snapshot("Catalog")
     }
     
     // Тестирует поведение кнопки при положительной валидации модели
@@ -54,12 +56,14 @@ class AuthUITests: XCTestCase {
         let register = app.staticTexts["header"]
         XCTAssertNotNil(register)
         XCTAssertEqual(register.label, "Зарегистрируйтесь")
+        snapshot("Register")
         
         app.buttons["login"].tap()
         
         let login = app.staticTexts["header"]
         XCTAssertNotNil(login)
         XCTAssertEqual(login.label, "Добро пожаловать")
+        snapshot("Login")
     }
     
     // Вводит данные в поля авторизации

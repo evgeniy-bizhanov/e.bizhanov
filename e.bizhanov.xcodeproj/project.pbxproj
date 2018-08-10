@@ -58,6 +58,7 @@
 		7A90159920EE89C900E63F9F /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A90159820EE89C900E63F9F /* Register.swift */; };
 		7AA270B421064B0100628A1E /* UIScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA270B321064B0100628A1E /* UIScrollViewController.swift */; };
 		7AA270B621064B4100628A1E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA270B521064B4100628A1E /* Extensions.swift */; };
+		7ABFC060211BEA64009BE9A7 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABFC05F211BEA64009BE9A7 /* SnapshotHelper.swift */; };
 		7ACAF79121177E1000DFA4CB /* AuthServiceAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAF79021177E1000DFA4CB /* AuthServiceAssembler.swift */; };
 		7ACAF7932118098900DFA4CB /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAF7922118098900DFA4CB /* Injection.swift */; };
 		7ACAF79621180E4C00DFA4CB /* ServiceAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACAF79521180E4C00DFA4CB /* ServiceAssembler.swift */; };
@@ -160,6 +161,7 @@
 		7A90159820EE89C900E63F9F /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		7AA270B321064B0100628A1E /* UIScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScrollViewController.swift; sourceTree = "<group>"; };
 		7AA270B521064B4100628A1E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		7ABFC05F211BEA64009BE9A7 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 		7ACAF79021177E1000DFA4CB /* AuthServiceAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceAssembler.swift; sourceTree = "<group>"; };
 		7ACAF7922118098900DFA4CB /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
 		7ACAF79521180E4C00DFA4CB /* ServiceAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAssembler.swift; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 		7A2584DE20E7E30C0030E644 /* e.bizhanovUITests */ = {
 			isa = PBXGroup;
 			children = (
+				7ABFC05F211BEA64009BE9A7 /* SnapshotHelper.swift */,
 				7A2584DF20E7E30C0030E644 /* AuthUITests.swift */,
 				7A2584E120E7E30C0030E644 /* Info.plist */,
 			);
@@ -824,6 +827,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A2584E020E7E30C0030E644 /* AuthUITests.swift in Sources */,
+				7ABFC060211BEA64009BE9A7 /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -973,6 +977,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 6TZ3MZ977X;
 				INFOPLIST_FILE = e.bizhanov/Environments/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -981,6 +986,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -990,6 +996,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 6TZ3MZ977X;
 				INFOPLIST_FILE = e.bizhanov/Environments/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -998,6 +1005,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};

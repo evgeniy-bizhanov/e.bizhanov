@@ -9,21 +9,6 @@ import Swinject
 class AuthServiceAssembler: Assembly {
     func assemble(container: Container) {
         
-        func makeFactory<T: AbstractRequestManager>(_ service: T.Type, resolver: Resolver) -> T {
-            
-            let errorParser = resolver.resolve(​AbstractErrorParser​.self)
-            let sessionManager = resolver.resolve(SessionManager.self)
-            let sessionQueue = resolver.resolve(DispatchQueue.self)
-            
-            // swiftlint:disable force_unwrapping
-            return T(
-                errorParser: errorParser!,
-                sessionManager: sessionManager!,
-                queue: sessionQueue
-            )
-            // swiftlint:enable force_unwrapping
-        }
-        
         container.register(AuthRequestFactory.self) { resolver in
             Injector.makeFactory(AuthRequestManager.self, resolver: resolver)
         }
